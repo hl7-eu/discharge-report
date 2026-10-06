@@ -35,6 +35,23 @@ Also in the build log, not reported in the QA:
   - [ ] Review the broad wildcard suppressions. They also hide messages from new examples, e.g. `%This element does not match any known slice defined in the profile .../composition-eu-dr%` has 17 uses, and the one on `.../encounter-eu-dr%` has 1. Check that none of them come from the ED example, and narrow the patterns where possible.
   - [ ] Check the 50 warnings suppressed on `StructureDefinition-composition-eu-dr` and the 26 on `composition-obl-eu-dr`, to make sure nothing new related to the `Composition.type` binding is hidden.
 
+### Third build – 2026-10-06, IG Publisher 2.3.5
+
+IG Publisher 2.3.5 (`../publisher.jar`, updated on 2026-10-06), validator core `6.0.0-snapshot1`.
+QA result: **5 errors, 11 warnings, 41 information**, "9 broken links", 1 page with invalid XHTML.
+Suppressed: 188 warnings and 639 hints.
+The guide content is the same as for the second build (1 / 0 / 0 / 0), so these messages come from the new publisher version.
+
+- [ ] **Marcheschi example: empty Practitioner identifier.** In `practitioner-ftgm-author` (`input/fsh/examples/instances/HDR-Paolo-Marcheschi-example.fsh`), `identifier.id = "12345"` should be `identifier.value` (plus a `system`). This bug was inherited from the HDR and is now caught by `ele-1`. It also causes the other three Marcheschi errors: no matching `composition` slice, and no profile match for `Composition.author` and `attester.party`.
+- [ ] **WCAG heading error.** In the Novak sub-sections example page, `<h4> 'Attesters'` follows `<h2>`. The heading comes from the generated narrative or the template; check whether it can be fixed in the guide or whether it should be suppressed or reported to the tooling.
+- [ ] **`searchform.html` not well formed (8 warnings).** This page comes from the local `ig-template`. It probably also explains the "9 broken links" in the QA summary, because the link checker in the build log reports 0 broken links. Update or fix the template.
+- [ ] **Suppressions that no longer match the new message texts.**
+  - [ ] The OID information messages now point to `https://build.fhir.org/ig/FHIR/ig-guidance/oids.html`; the current pattern expects the old `fhir-tools-ig` URL. Use a URL-independent pattern, e.g. `%could usefully have an OID assigned%`.
+  - [ ] `ext-ab-1` warnings ("Additional Bindings SHOULD have a key…") on the obligation profiles, inherited from EU Base. Check the new wording and update the suppression.
+  - [ ] Warning on `medicationRequest-obl-eu-dr`: "The Binding on the type slicer MedicationRequest.substitution.allowed[x] applies to all its slices". This is new; analyse it before suppressing.
+  - [ ] Information messages about draft code systems in the Novak `MedicationStatement.category`. Check whether the existing `MSG_DRAFT` suppression should cover them.
+- [ ] Decide which IG Publisher version is the reference for this guide. `../publisher.jar` and `~/.fhir/tools/publisher/publisher.jar` (used by the updated `_build` scripts) can now be different versions.
+
 ## 2. Project infrastructure (outside this repo)
 
 - [x] GitHub repository: `hl7-eu/dr` renamed to `hl7-eu/discharge-report` on 2026-10-06 (the old URL redirects). `README.md`, `FHIR-eu-discharge-report.xml` and the local `origin` remote are updated. The package id and canonical were also renamed, from `hl7.fhir.eu.dr` and `http://hl7.eu/fhir/dr` to `hl7.fhir.eu.discharge-report` and `http://hl7.eu/fhir/discharge-report`, and the JIRA spec file to `FHIR-eu-discharge-report.xml`. Artifact ids (`*-eu-dr`) and names (`*EuDr`) keep the `dr` code.
@@ -129,7 +146,7 @@ Also in the build log, not reported in the QA:
 
 ## 10. Repository housekeeping
 
-- [ ] `models-src/` still holds the HDR sources (`ehn_hdr_guidelines_en.pdf`, `hl7-hdr-models-and-maps.xlsx`, `mindMap/hl7-hdr-mindmap.xlsx`). Decide whether to keep them as background, rename them, or replace them with DR material.
+- [x] HDR sources removed from `models-src/` on 2026-10-06. Original item: `models-src/` still holds the HDR sources (`ehn_hdr_guidelines_en.pdf`, `hl7-hdr-models-and-maps.xlsx`, `mindMap/hl7-hdr-mindmap.xlsx`). Decide whether to keep them as background, rename them, or replace them with DR material.
 - [ ] Refresh the `_xtehr/` reference snapshot if newer Xt-EHR models are published.
 - [ ] Commit the pending `_attic/` and `reviews/` deletions, which were present before the scope change, or restore them.
 - [ ] Clean the commented-out HDR leftovers in `sushi-config.yaml` (eHN logical model groups, `*-map.html` pages, ConceptMaps).
