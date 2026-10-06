@@ -1,6 +1,6 @@
 # Discharge Report IG – to-do list after the HDR → DR scope change
 
-Started: 2026-10-06, after the first revision (v0.1.0) that turned the Hospital Discharge Report (HDR) 1.0.0 into the generic Discharge Report (DR).
+Started: 2026-10-06, after the first revision (version 1.0.0-ci-build) that turned the Hospital Discharge Report (HDR) 1.0.0 into the generic Discharge Report (DR).
 Status: `[ ]` open · `[x]` done · `[-]` dropped (add a short reason).
 
 ---
@@ -25,7 +25,7 @@ Also in the build log, not reported in the QA:
 ### Items
 
 - [x] Run the full IG Publisher (`_build`) and triage the QA report. Done 2026-10-06; results are in the table above.
-- [ ] Rebuild to confirm that the LOINC 28655-9 display fix clears the information message.
+- [x] Rebuild to confirm that the LOINC 28655-9 display fix clears the information message. The second build, with version 1.0.0-ci-build, on 2026-10-06 returned 1 error (the expected JIRA spec file), 0 warnings, 0 information messages and 0 broken links.
 - [x] Use a terminology server to check the codes added in this revision:
   - [x] the LOINC codes in `DischargeReportTypeDrVS`: all are valid. Only the 28655-9 display was wrong, and it is now fixed.
   - [x] the codes in the new ED example (SNOMED CT 29857009 and 29303009, ICD-10 R07.4, `discharge-disposition#home`): no terminology issues reported.
@@ -38,13 +38,13 @@ Also in the build log, not reported in the QA:
 ## 2. Project infrastructure (outside this repo)
 
 - [x] GitHub repository: `hl7-eu/dr` renamed to `hl7-eu/discharge-report` on 2026-10-06 (the old URL redirects). `README.md`, `FHIR-eu-discharge-report.xml` and the local `origin` remote are updated. The package id and canonical were also renamed, from `hl7.fhir.eu.dr` and `http://hl7.eu/fhir/dr` to `hl7.fhir.eu.discharge-report` and `http://hl7.eu/fhir/discharge-report`, and the JIRA spec file to `FHIR-eu-discharge-report.xml`. Artifact ids (`*-eu-dr`) and names (`*EuDr`) keep the `dr` code.
-- [ ] Set up the CI build at `https://build.fhir.org/ig/hl7-eu/discharge-report` (webhook from the renamed repo).
+- [x] Set up the CI build at `https://build.fhir.org/ig/hl7-eu/discharge-report`: HL7 build webhook configured on 2026-10-06.
 - [ ] Register the `FHIR-eu-discharge-report` specification in the HL7 JIRA spec-artifacts repo so that feedback can be submitted.
 - [ ] Reserve or confirm the package id `hl7.fhir.eu.discharge-report` and the canonical `http://hl7.eu/fhir/discharge-report` with HL7 Europe.
 - [ ] Decide what happens to the HDR IG:
   - [ ] whether it is maintained in parallel, frozen, or superseded by DR;
   - [ ] if superseded, add a note to the HDR IG pointing to DR.
-- [ ] Decide the publication plan for `publication-request.json`: it is currently `0.1.0`, `draft`, mode `working`. Should the first release be a ballot instead?
+- [ ] Decide the publication plan for `publication-request.json`: it is currently `1.0.0-ci-build`, `draft`, mode `working`; set the final version and path before publication. Should the first release be a ballot instead?
 
 ## 3. Scope decisions to confirm (project team)
 

@@ -1,9 +1,9 @@
 {
   "package-id" : "hl7.fhir.eu.discharge-report",
-  "version" : "0.1.0",
-  "path" : "http://hl7.eu/fhir/discharge-report/0.1.0",
-  "desc" : "This publication is the first draft release of the HL7 Europe Discharge Report Implementation Guide (version 0.1.0), derived from the HL7 Europe Hospital Discharge Report Implementation Guide 1.0.0.",
-  "descmd" : "This publication is the first draft release of the HL7 Europe Discharge Report Implementation Guide (version 0.1.0), derived from the HL7 Europe Hospital Discharge Report Implementation Guide 1.0.0.",
+  "version" : "1.0.0-ci-build",
+  "path" : "http://hl7.eu/fhir/discharge-report/1.0.0-ci-build",
+  "desc" : "This publication is the first draft of the HL7 Europe Discharge Report Implementation Guide (version 1.0.0-ci-build), derived from the HL7 Europe Hospital Discharge Report Implementation Guide 1.0.0.",
+  "descmd" : "This publication is the first draft of the HL7 Europe Discharge Report Implementation Guide (version 1.0.0-ci-build), derived from the HL7 Europe Hospital Discharge Report Implementation Guide 1.0.0.",
   "status" : "draft",
   "sequence" : "STU 1",
   "mode" : "working",

@@ -1,6 +1,6 @@
 This page summarises the main changes applied to this version of the guide.
 
-### 0.1.0 – Initial version, derived from the Hospital Discharge Report IG 1.0.0
+### 1.0.0-ci-build – Initial version, derived from the Hospital Discharge Report IG 1.0.0
 
 This guide is derived from the [HL7 Europe Hospital Discharge Report (HDR) FHIR IG 1.0.0](http://hl7.eu/fhir/hdr/1.0.0). Its scope is extended from the hospital discharge report to **any kind of discharge report**, in line with the Xt-EHR `EHDSDischargeReport` logical model. For the history of the changes prior to this version, see the [HDR change log](http://hl7.eu/fhir/hdr/1.0.0/changes.html).
 

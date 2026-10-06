@@ -4,7 +4,7 @@ name:  Hl7EuDischargeReportIg
 title: HL7 Europe Discharge Report
 description: This implementation guide specifies the Discharge Report in the European context, covering discharge reports produced at the end of any kind of healthcare encounter (e.g. hospital stays, emergency department visits, day-care, rehabilitation or ambulatory episodes), as defined by the EHDS logical models.
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 1.0.0-ci-build
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
