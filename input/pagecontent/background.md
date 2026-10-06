@@ -21,7 +21,7 @@ The EHDS regulation defines a framework to:
 A key role in the regulation is played by the **European EHR eXchange Format** (EEHRxF), defined as a format that is *"commonly used, machine-readable, and allowing transmission of personal electronic health data between different software applications, devices and healthcare providers. The format should support transmission of structured and unstructured health data."*
 
 When the regulation enters into application, EHR-systems will be required to support the EEHRxF for providing and receiving personal electronic health data under a **priority category for primary use** established under the EHDS Regulation. 
-The six priority categories are summarized in the following picture, including discharge reports, of which the **Hospital Discharge Report** is the subject of this guide.
+The six priority categories are summarized in the following picture, including **discharge reports**, which are the subject of this guide.
 
 <div>
 <img src="ehds-domain.png" class="figure-img img-responsive img-rounded center-block" width="70%">

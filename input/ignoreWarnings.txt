@@ -4,7 +4,7 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # False positive: the reference FHIRPath engine incorrectly infers split() as a singleton instead of an ordered collection.
-bdl-hdr-2: Found a use of a collection operator on something that is not a collection at 'split('-').first().lower()' - check that there's no mistakes in the expression syntax
+bdl-dr-2: Found a use of a collection operator on something that is not a collection at 'split('-').first().lower()' - check that there's no mistakes in the expression syntax
 
 # == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
 Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
@@ -14,13 +14,13 @@ Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-act
 # the IG Publisher adds the tooling sub-extension http://hl7.org/fhir/tools/StructureDefinition/snapshot-source
 # (source profile of the obligation) to every obligation extension copied into a snapshot. This sub-extension is not
 # a slice of http://hl7.org/fhir/StructureDefinition/obligation (hl7.fhir.uv.extensions.r4#5.3.0, open slicing).
-# The HDR obligations only use the code and actor sub-extensions, which match the defined slices.
+# The DR obligations only use the code and actor sub-extensions, which match the defined slices.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
 
 # Luigi De Luca example: the two FamilyMemberHistory entries are referenced by an additional top-level
-# "Family History" section (allowed by the open section slicing) and are kept on purpose; BundleEuHdr has no
+# "Family History" section (allowed by the open section slicing) and are kept on purpose; BundleEuDr has no
 # familyMemberHistory entry slice (information message). Note: this also hides other Bundle entries not matching a slice.
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/discharge-report/StructureDefinition/bundle-eu-dr%
 
 
 # duplicated anchor ids
@@ -30,7 +30,7 @@ The html source has duplicate anchor Ids: 1
 The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
 
 # Examples are no needed for obligation profiles
-%-obl-eu-hdr'): The Implementation Guide contains no examples for this%
+%-obl-eu-dr'): The Implementation Guide contains no examples for this%
 
 
 # example url that doesn't resolve
@@ -74,11 +74,11 @@ Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c
 
 
 # known non-matching slices
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/discharge-report/StructureDefinition/composition-eu-dr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/discharge-report/StructureDefinition/deviceUseStatement-eu-dr%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationRequest-eu-core%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationStatement-eu-core%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/discharge-report/StructureDefinition/encounter-eu-dr%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core%
 
 

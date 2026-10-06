@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSEncounter -> Encounter (HDR)</title>
+    <title>EHDSEncounter -> Encounter (DR)</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -13,12 +13,12 @@
         </div>
       </div>
     </div>
-    <h3>EHDSEncounter -> Encounter (HDR)</h3>
+    <h3>EHDSEncounter -> Encounter (DR)</h3>
     <a> </a>
     <p></p>
     <p>
       This page explains how conceptual elements from the EHDSEncounter logical model are expressed
-      in the corresponding FHIR EncounterEuHdr profile used by this Implementation Guide.
+      in the corresponding FHIR EncounterEuDr profile used by this Implementation Guide.
     </p>
     <p></p>
     <div class="table-wrap">
@@ -32,21 +32,21 @@
         </li>
         <li>
           <strong>Target FHIR profile:</strong>
-          <a href="StructureDefinition-encounter-eu-hdr.html">
-            EncounterEuHdr
+          <a href="StructureDefinition-encounter-eu-dr.html">
+            EncounterEuDr
           </a>
         </li>
       </ul>
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSEncounter -> Encounter (HDR)">
-        <caption>EHDSEncounter -> Encounter (HDR)</caption>
+      <table summary="EHDSEncounter -> Encounter (DR)">
+        <caption>EHDSEncounter -> Encounter (DR)</caption>
         <thead>
           <tr>
             <th colspan="1" class="src-head">EHDSEncounter (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="3" class="tgt-head">Encounter (HDR)</th>
+            <th colspan="3" class="tgt-head">Encounter (DR)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>

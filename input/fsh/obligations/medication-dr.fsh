@@ -1,0 +1,22 @@
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Profile:  MedicationEuDrObligation
+Parent:   MedicationEuCore
+Id:       medication-obl-eu-dr
+Title:    "Medication: obligations"
+Description: "This profile defines obligations for the Medication resource for the purpose of this guide, adapted from the MPD work."
+//-------------------------------------------------------------------------------------------
+
+* insert SetFmmAndStatusRule ( 0, informative)
+
+* ingredient   
+  * item[x]	insert OblShallPopulateShallProcess
+  * strength  insert OblShallPopulateShallDisplayProcess
+  * isActive insert OblShallPopulateShallProcess
+
+* extension[productName] insert OblShallPopulateShallDisplayProcess
+* extension[classification] insert OblShallPopulateShouldDisplayShallProcess
+
+
+* identifier insert OblShallPopulateShallDisplayProcess
+* code insert OblShallPopulateShallDisplayProcess
+

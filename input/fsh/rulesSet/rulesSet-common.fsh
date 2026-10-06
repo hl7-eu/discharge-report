@@ -30,7 +30,7 @@ RuleSet: SectionComRules (short, def, code)
 // The existing SectionComRules(short, def, code) has no slot for a section
 // title, and its first argument populates ^short, not a title. The variant
 // below adds the title as a fourth item of content and keeps the original
-// ruleset untouched, so profiles outside the HDR that already call
+// ruleset untouched, so profiles outside this guide that already call
 // SectionComRules are unaffected.
 //
 // On the title argument:

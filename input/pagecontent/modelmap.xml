@@ -29,7 +29,7 @@
       <li>a link to the detailed element-by-element mapping</li>
     </ul>
 
-    <h4><span class="group-emoji">📋 </span>Hospital Discharge Report</h4><a>   </a>
+    <h4><span class="group-emoji">📋 </span>Discharge Report</h4><a>   </a>
     <p> </p>
     <div class="table-wrapper">
         <table class="model-index">
@@ -46,13 +46,13 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html" target="_blank">EHDSDischargeReport</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-bundle-eu-hdr.html">
-                            <code>BundleEuHdr</code>
-                        </a>, <a href="StructureDefinition-composition-eu-hdr.html">
-                            <code>CompositionEuHdr</code>
+                        <a href="StructureDefinition-bundle-eu-dr.html">
+                            <code>BundleEuDr</code>
+                        </a>, <a href="StructureDefinition-composition-eu-dr.html">
+                            <code>CompositionEuDr</code>
                         </a>, 
-                        <a href="StructureDefinition-encounter-eu-hdr.html"><code>EncounterEuHdr</code></a>,
-                        <a href="StructureDefinition-carePlan-eu-hdr.html"><code>CarePlanEuHdr</code></a>
+                        <a href="StructureDefinition-encounter-eu-dr.html"><code>EncounterEuDr</code></a>,
+                        <a href="StructureDefinition-carePlan-eu-dr.html"><code>CarePlanEuDr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdsdischargereport.html">EHDSDischargeReport Mapping</a>
@@ -220,7 +220,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDeviceUse.html" target="_blank">EHDSDeviceUse</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-deviceUseStatement-eu-hdr.html"><code>DeviceUseStatementEuHdr</code></a>
+                        <a href="StructureDefinition-deviceUseStatement-eu-dr.html"><code>DeviceUseStatementEuDr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a>
@@ -231,7 +231,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDevice.html" target="_blank">EHDSDevice</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-device-eu-hdr.html"><code>DeviceEuHdr</code></a>
+                        <a href="StructureDefinition-device-eu-dr.html"><code>DeviceEuDr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdsdevice.html">EHDSDevice Mapping</a>
@@ -242,7 +242,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCarePlan.html" target="_blank">EHDSCarePlan</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-carePlan-eu-hdr.html"><code>CarePlanEuHdr</code></a>
+                        <a href="StructureDefinition-carePlan-eu-dr.html"><code>CarePlanEuDr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdscareplan.html">EHDSCarePlan Mapping</a>
@@ -275,7 +275,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSEncounter.html" target="_blank">EHDSEncounter</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-encounter-eu-hdr.html"><code>EncounterEuHdr</code></a>
+                        <a href="StructureDefinition-encounter-eu-dr.html"><code>EncounterEuDr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdsencounter.html">EHDSEncounter Mapping</a>

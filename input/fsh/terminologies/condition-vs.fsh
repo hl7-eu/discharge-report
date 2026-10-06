@@ -1,9 +1,9 @@
 // --------------------------------------------------
-ValueSet:   ConditionHdrVS
-Id:         condition-eu-hdr
-Title:      "Condition Value Set (HDR)"
-Description:  """Hospital Discharge Report Condition value set includes selected codes from recommended EU code systems for health conditions (WHO-ICD-10, SNOMED CT and Orphacodes)."""
-* insert SetFmmAndStatusRule (2, trial-use)
+ValueSet:   ConditionDrVS
+Id:         condition-eu-dr
+Title:      "Condition Value Set (DR)"
+Description:  """Discharge Report Condition value set includes selected codes from recommended EU code systems for health conditions (WHO-ICD-10, SNOMED CT and Orphacodes)."""
+* insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
 * insert SNOMEDCopyrightForVS
 * codes from system $icd10

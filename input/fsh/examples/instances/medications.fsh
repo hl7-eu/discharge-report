@@ -53,7 +53,7 @@ Description: "1A. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Generi
 Instance: example-medicationstatement-euhdr
 InstanceOf: MedicationStatementEuCore
 Title: "MedicationStatement: Enalapril"
-Description: "A sample MedicationStatement for a patient taking Enalapril, used in the context of the European Hospital Discharge Report."
+Description: "A sample MedicationStatement for a patient taking Enalapril, used in the context of the European Discharge Report."
 
 
 * status = #active
@@ -96,7 +96,7 @@ Description: "A sample MedicationStatement for a patient taking Enalapril, used 
 
 
 Instance: 400D-dispense-1
-InstanceOf: MedicationDispenseEuHdr
+InstanceOf: MedicationDispenseEuDr
 Usage: #example
 Title: "MedicationDispense: Cefuroxime 1500 mg, First Dispense"
 Description: "400D-1. Medication dispense fulfilling the first part of the order: 1 package containing 10 vials."

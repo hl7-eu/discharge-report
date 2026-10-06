@@ -1,6 +1,6 @@
-Profile: SpecimenEuHdrObligation
+Profile: SpecimenEuDrObligation
 Parent: Specimen
-Id: specimen-obl-eu-hdr
+Id: specimen-obl-eu-dr
 Title:    "Specimen: obligations"
 Description: "This profile defines obligations for Specimen in FHIR for the purpose of this guide."
 * insert SetFmmAndStatusRule ( 0, informative)

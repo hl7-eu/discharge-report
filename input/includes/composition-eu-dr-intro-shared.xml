@@ -1,0 +1,14 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <div xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <blockquote class="stu-note">
+            <b>Medication Lists</b>
+            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While clearer boundaries and relationships between resources may be useful, the editors have decided to keep a comprehensive set of options open. Implementers are invited to provide feedback, via HL7 Jira, on the use of medication-related resources (e.g. MedicationStatement, MedicationRequest) in the Discharge Report medication lists.</p>
+        </blockquote>
+
+    </div>
+
+
+</div>

@@ -45,7 +45,7 @@ Description: "A total hip replacement whose body site, including the side of the
 
 
 Instance: example-deviceusestatement-hip-euhdr
-InstanceOf: DeviceUseStatementEuHdr
+InstanceOf: DeviceUseStatementEuDr
 Title: "DeviceUseStatement: Total Hip Replacement Prosthesis"
 Description: "An implanted hip prosthesis whose body site, including the side of the body, is carried by a referenced BodyStructure. DeviceUseStatement.bodySite uses the R5 backport extension for DeviceUsage.bodySite, because the context of use of the generic bodySite extension does not cover DeviceUseStatement."
 
@@ -74,7 +74,7 @@ Description: "An implanted hip prosthesis whose body site, including the side of
 
 
 Instance: hip-prosthesis-001
-InstanceOf: DeviceEuHdr
+InstanceOf: DeviceEuDr
 Title: "Device: Total Hip Replacement Prosthesis"
 Description: "A sample Device resource for an implanted hip prosthesis, referenced in a DeviceUseStatement."
 

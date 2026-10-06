@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="https://build.fhir.org/ig/hl7-eu/discharge-report" defaultVersion="current" defaultWorkgroup="eu" gitUrl="https://github.com/hl7-eu/discharge-report" url="http://hl7.eu/fhir/discharge-report">
+<version code="current" url="https://build.fhir.org/ig/hl7-eu/discharge-report"/>
+<version code="0.1.0" url="http://hl7.eu/fhir/discharge-report/0.1.0"/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="ValueSet/admission-urgency-eu-dr" key="ValueSet-admission-urgency-eu-dr" name="Admission Urgency Value Set"/>
+<artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="AllergyIntolerance: Critical Allergy to Penicillin"/>
+<artifact id="StructureDefinition/allergyIntolerance-obl-eu-dr" key="StructureDefinition-allergyIntolerance-obl-eu-dr" name="AllergyIntolerance: obligations"/>
+<artifact id="BodyStructure/bodystructure-left-hip" key="BodyStructure-bodystructure-left-hip" name="BodyStructure: Left Hip Joint"/>
+<artifact id="StructureDefinition/bundle-eu-dr" key="StructureDefinition-bundle-eu-dr" name="Bundle (DR)"/>
+<artifact id="Bundle/DR-Emergency-Department-Example" key="Bundle-DR-Emergency-Department-Example" name="Bundle: Emergency Department Discharge Report, Chest Pain"/>
+<artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Bundle: HDR Acute Respiratory Failure (Italian)"/>
+<artifact id="Bundle/DischargeBundle-Novak-Petr-Subsections" key="Bundle-DischargeBundle-Novak-Petr-Subsections" name="Bundle: HDR Inguinal Hernia with Sub-sections (Czech)"/>
+<artifact id="Bundle/HDR-Reijer-Wolff-Example" key="Bundle-HDR-Reijer-Wolff-Example" name="Bundle: HDR Lower Leg Fracture"/>
+<artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle: HDR Twin Delivery by Cesarean Section"/>
+<artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Bundle: HDR Type 2 Diabetes Mellitus"/>
+<artifact id="StructureDefinition/bundle-obl-eu-dr" key="StructureDefinition-bundle-obl-eu-dr" name="Bundle: obligations"/>
+<artifact id="StructureDefinition/carePlan-eu-dr" key="StructureDefinition-carePlan-eu-dr" name="CarePlan (DR)"/>
+<artifact id="CarePlan/b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" key="CarePlan-b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" name="CarePlan: Diabetes Management Plan"/>
+<artifact id="StructureDefinition/carePlan-obl-eu-dr" key="StructureDefinition-carePlan-obl-eu-dr" name="CarePlan: obligations"/>
+<artifact id="StructureDefinition/composition-eu-dr" key="StructureDefinition-composition-eu-dr" name="Composition (DR)"/>
+<artifact id="Composition/b9dc409d-ec81-4556-9fac-4dc3f731c199" key="Composition-b9dc409d-ec81-4556-9fac-4dc3f731c199" name="Composition: HDR Type 2 Diabetes Mellitus"/>
+<artifact id="StructureDefinition/composition-obl-eu-dr" key="StructureDefinition-composition-obl-eu-dr" name="Composition: obligations"/>
+<artifact id="ValueSet/condition-eu-dr" key="ValueSet-condition-eu-dr" name="Condition Value Set (DR)"/>
+<artifact id="Condition/condition-left-hip-osteoarthritis" key="Condition-condition-left-hip-osteoarthritis" name="Condition: Osteoarthritis of the Left Hip"/>
+<artifact id="Condition/a5bf69e4-24db-48a8-9eda-71516dcaf1d9" key="Condition-a5bf69e4-24db-48a8-9eda-71516dcaf1d9" name="Condition: Type 2 Diabetes Mellitus"/>
+<artifact id="StructureDefinition/condition-obl-eu-dr" key="StructureDefinition-condition-obl-eu-dr" name="Condition: obligations"/>
+<artifact id="StructureDefinition/device-eu-dr" key="StructureDefinition-device-eu-dr" name="Device (DR)"/>
+<artifact id="Device/pacemaker-001" key="Device-pacemaker-001" name="Device: Implantable Pacemaker"/>
+<artifact id="Device/hip-prosthesis-001" key="Device-hip-prosthesis-001" name="Device: Total Hip Replacement Prosthesis"/>
+<artifact id="StructureDefinition/device-obl-eu-dr" key="StructureDefinition-device-obl-eu-dr" name="Device: obligations"/>
+<artifact id="StructureDefinition/deviceUseStatement-eu-dr" key="StructureDefinition-deviceUseStatement-eu-dr" name="DeviceUseStatement (DR)"/>
+<artifact id="DeviceUseStatement/example-deviceusestatement-euhdr" key="DeviceUseStatement-example-deviceusestatement-euhdr" name="DeviceUseStatement: Implanted Pacemaker"/>
+<artifact id="DeviceUseStatement/example-deviceusestatement-hip-euhdr" key="DeviceUseStatement-example-deviceusestatement-hip-euhdr" name="DeviceUseStatement: Total Hip Replacement Prosthesis"/>
+<artifact id="StructureDefinition/deviceUseStatement-obl-eu-dr" key="StructureDefinition-deviceUseStatement-obl-eu-dr" name="DeviceUseStatement: obligations"/>
+<artifact id="ValueSet/discharge-report-type-eu-dr" key="ValueSet-discharge-report-type-eu-dr" name="Discharge Report Type Value Set"/>
+<artifact id="StructureDefinition/encounter-eu-dr" key="StructureDefinition-encounter-eu-dr" name="Encounter (DR)"/>
+<artifact id="ValueSet/encounter-class-eu-dr" key="ValueSet-encounter-class-eu-dr" name="Encounter Class Value Set"/>
+<artifact id="ValueSet/encounter-status-eu-dr" key="ValueSet-encounter-status-eu-dr" name="Encounter Status Value Set"/>
+<artifact id="ValueSet/encounter-type-eu-dr" key="ValueSet-encounter-type-eu-dr" name="Encounter Type Value Set"/>
+<artifact id="Encounter/12fef60c-1fe7-4988-8286-af691889a3f3" key="Encounter-12fef60c-1fe7-4988-8286-af691889a3f3" name="Encounter: Hospital admission and discharge, Reijer Wolff"/>
+<artifact id="StructureDefinition/encounter-obl-eu-dr" key="StructureDefinition-encounter-obl-eu-dr" name="Encounter: obligations"/>
+<artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"/>
+<artifact id="Flag/example-flag-allergy" key="Flag-example-flag-allergy" name="Flag: Critical Allergy to Penicillin"/>
+<artifact id="Flag/example-flag-no-left-arm" key="Flag-example-flag-no-left-arm" name="Flag: Do Not Use Left Arm"/>
+<artifact id="StructureDefinition/flag-obl-eu-dr" key="StructureDefinition-flag-obl-eu-dr" name="Flag: obligations"/>
+<artifact id="StructureDefinition/goal-eu-dr" key="StructureDefinition-goal-eu-dr" name="Goal (DR)"/>
+<artifact id="Goal/goal-mobilisatie-swart" key="Goal-goal-mobilisatie-swart" name="Goal: Postoperative Mobilization"/>
+<artifact id="Immunization/example-covid19-vax-admin" key="Immunization-example-covid19-vax-admin" name="Immunization: COVID-19 vaccine dose administered"/>
+<artifact id="StructureDefinition/immunization-obl-eu-dr" key="StructureDefinition-immunization-obl-eu-dr" name="Immunization: obligations"/>
+<artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="Medication: Cefuroxime 1500 mg, branded"/>
+<artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="Medication: Cefuroxime 1500 mg, generic"/>
+<artifact id="StructureDefinition/medication-obl-eu-dr" key="StructureDefinition-medication-obl-eu-dr" name="Medication: obligations"/>
+<artifact id="StructureDefinition/medicationAdministration-eu-dr" key="StructureDefinition-medicationAdministration-eu-dr" name="MedicationAdministration (DR)"/>
+<artifact id="MedicationAdministration/1bcfb26f-6958-4604-a40b-712170c1e536" key="MedicationAdministration-1bcfb26f-6958-4604-a40b-712170c1e536" name="MedicationAdministration: Paracetamol"/>
+<artifact id="StructureDefinition/medicationAdministration-obl-eu-dr" key="StructureDefinition-medicationAdministration-obl-eu-dr" name="MedicationAdministration: obligations"/>
+<artifact id="StructureDefinition/medicationDispense-eu-dr" key="StructureDefinition-medicationDispense-eu-dr" name="MedicationDispense (DR)"/>
+<artifact id="MedicationDispense/400D-dispense-1" key="MedicationDispense-400D-dispense-1" name="MedicationDispense: Cefuroxime 1500 mg, First Dispense"/>
+<artifact id="StructureDefinition/medicationDispense-obl-eu-dr" key="StructureDefinition-medicationDispense-obl-eu-dr" name="MedicationDispense: obligations"/>
+<artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="MedicationRequest: Cefuroxime 1500 mg, Single Line"/>
+<artifact id="StructureDefinition/medicationRequest-obl-eu-dr" key="StructureDefinition-medicationRequest-obl-eu-dr" name="MedicationRequest: obligations"/>
+<artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="MedicationStatement: Enalapril"/>
+<artifact id="StructureDefinition/medicationStatement-obl-eu-dr" key="StructureDefinition-medicationStatement-obl-eu-dr" name="MedicationStatement: obligations"/>
+<artifact id="StructureDefinition/laboratoryObservation-obl-eu-dr" key="StructureDefinition-laboratoryObservation-obl-eu-dr" name="Observation (laboratory): obligations"/>
+<artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO Group"/>
+<artifact id="Observation/6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" key="Observation-6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" name="Observation: Abdominal circumference"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001d" key="Observation-3f85726c-ad2f-441b-89ce-10000000001d" name="Observation: Alcohol use"/>
+<artifact id="Observation/8d2aea77-f576-4d0f-9508-537359aa44d6" key="Observation-8d2aea77-f576-4d0f-9508-537359aa44d6" name="Observation: Blood pressure"/>
+<artifact id="Observation/6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" key="Observation-6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" name="Observation: Body height"/>
+<artifact id="Observation/7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" key="Observation-7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" name="Observation: Body mass index"/>
+<artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Observation: Body weight, Fiona Swart"/>
+<artifact id="Observation/5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" key="Observation-5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" name="Observation: Body weight, Petr Novák"/>
+<artifact id="Observation/4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" key="Observation-4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" name="Observation: Chest circumference"/>
+<artifact id="Observation/5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" key="Observation-5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" name="Observation: Head circumference"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001c" key="Observation-3f85726c-ad2f-441b-89ce-10000000001c" name="Observation: Smoking status"/>
+<artifact id="StructureDefinition/observation-obl-eu-dr" key="StructureDefinition-observation-obl-eu-dr" name="Observation: obligations"/>
+<artifact id="Organization/organization-sophia" key="Organization-organization-sophia" name="Organization: Erasmus MC"/>
+<artifact id="StructureDefinition/organization-obl-eu-dr" key="StructureDefinition-organization-obl-eu-dr" name="Organization: obligations"/>
+<artifact id="Patient/patient-swart" key="Patient-patient-swart" name="Patient: Dutch Patient"/>
+<artifact id="StructureDefinition/patient-obl-eu-dr" key="StructureDefinition-patient-obl-eu-dr" name="Patient: obligations"/>
+<artifact id="StructureDefinition/practitioner-obl-eu-dr" key="StructureDefinition-practitioner-obl-eu-dr" name="Practitioner: obligations"/>
+<artifact id="StructureDefinition/practitionerRole-obl-eu-dr" key="StructureDefinition-practitionerRole-obl-eu-dr" name="PractitionerRole: obligations"/>
+<artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Procedure: Cesarean Section"/>
+<artifact id="Procedure/procedure-left-hip-replacement" key="Procedure-procedure-left-hip-replacement" name="Procedure: Total Replacement of the Left Hip"/>
+<artifact id="StructureDefinition/procedure-obl-eu-dr" key="StructureDefinition-procedure-obl-eu-dr" name="Procedure: obligations"/>
+<artifact id="StructureDefinition/relatedPerson-obl-eu-dr" key="StructureDefinition-relatedPerson-obl-eu-dr" name="RelatedPerson: obligations"/>
+<artifact id="StructureDefinition/specimen-obl-eu-dr" key="StructureDefinition-specimen-obl-eu-dr" name="Specimen: obligations"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="authors" name="Authors and contributors"/>
+<page key="background" name="Background"/>
+<page key="challenges" name="Challenges"/>
+<page key="changes" name="Change Log"/>
+<page key="copyright" name="Copyright"/>
+<page key="crossversionanalysis" name="Cross version analysis"/>
+<page key="dependencies" name="Dependencies"/>
+<page key="design" name="Design Approach"/>
+<page key="downloads" name="Downloads"/>
+<page key="map-ehdsattachment" name="EHDSAttachment Mapping"/>
+<page key="map-ehdscareplan" name="EHDSCarePlan Mapping"/>
+<page key="map-ehdsdevice" name="EHDSDevice Mapping"/>
+<page key="map-ehdsdeviceuse" name="EHDSDeviceUse Mapping"/>
+<page key="map-ehdsdischargereport" name="EHDSDischargeReport Mapping"/>
+<page key="map-ehdsencounter" name="EHDSEncounter Mapping"/>
+<page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
+<page key="map-ehdsrelatedperson" name="EHDSRelatedPerson Mapping"/>
+<page key="expansion-params" name="Expansion Parameters"/>
+<page key="index" name="Home"/>
+<page key="knownIssues" name="Known Issues"/>
+<page key="logicalmodels" name="Logical Models"/>
+<page key="modelmap" name="Model Map Overview"/>
+<page key="obligations" name="Obligations"/>
+<page key="references" name="References"/>
+<page key="scope" name="Scope and content"/>
+<page key="toc" name="Table of Contents"/>
+</specification>

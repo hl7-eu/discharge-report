@@ -1,4 +1,4 @@
-This Implementation Guide is produced by HL7 Europe, specifically the Project Team for the Hospital Discharge Report, European Patient Summary, and Base Implementation Guide.
+This Implementation Guide is produced by HL7 Europe, specifically the Project Team for the Discharge Report, European Patient Summary, and Base Implementation Guide. It builds on the HL7 Europe Hospital Discharge Report Implementation Guide, developed by the same project team.
 
 It reflects the substantial contribution of a broad and diverse community of **224 individual contributors**, representing **29 countries worldwide**, including **23 European countries** (Austria, Belgium, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, and the United Kingdom).
 

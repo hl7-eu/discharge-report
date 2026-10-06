@@ -120,7 +120,7 @@ Usage: #inline
 * onsetDateTime = 2025-02-08
 
 Instance: ziekenhuisopname-swart
-InstanceOf: EncounterEuHdr
+InstanceOf: EncounterEuDr
 Title: "Encounter: Planned hospital admission for twin delivery"
 Description: "A planned hospital admission for the delivery of twins."
 Usage: #inline
@@ -172,7 +172,7 @@ Usage: #example
 * performedPeriod.end = "2025-02-10T11:48:00+02:00"
 
 Instance: goal-mobilisatie-swart
-InstanceOf: GoalEuHdr
+InstanceOf: GoalEuDr
 Title: "Goal: Postoperative Mobilization"
 Description: "Goal profile example representing the goal of full postoperative mobilization after cesarean section."
 Usage: #example
@@ -244,9 +244,9 @@ Usage: #inline
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
-InstanceOf: CompositionEuHdr
+InstanceOf: CompositionEuDr
 Title: "Composition: HDR Twin Delivery by Cesarean Section"
-Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
+Description: "HL7 FHIR Composition example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Fiona Swart."
 Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:46d2422c-a137-4306-92bc-8295c931abe0"
@@ -360,10 +360,10 @@ Usage: #inline
 * section[sectionProblems].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
 // section 3
-* section[sectionHospitalCourse].title = "Hospital course note"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
-* section[sectionHospitalCourse].text.status = #generated
-* section[sectionHospitalCourse].text.div = """
+* section[sectionCourseOfEncounter].title = "Hospital course note"
+* section[sectionCourseOfEncounter].code = $loinc#8648-8 "Hospital course note"
+* section[sectionCourseOfEncounter].text.status = #generated
+* section[sectionCourseOfEncounter].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   The scheduled cesarean section procedure was performed on the day of admission without complications. Intraoperative and postoperative courses were uneventful. Postoperative pain was managed effectively with standard analgesia. Vital signs remained stable throughout the stay, and there were no signs of infection or other complications. The patient was mobilized on postoperative day one and tolerated oral intake well. Mother and newborn received routine postnatal care.
 </div>
@@ -405,9 +405,9 @@ Usage: #inline
 * section[sectionDischargeDetails].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was discharged after cesarean section with healthy twin.</div>"
 
 Instance: bundle-swart
-InstanceOf: BundleEuHdr
+InstanceOf: BundleEuDr
 Title: "Bundle: HDR Twin Delivery by Cesarean Section"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
+Description: "HL7 FHIR Bundle example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Fiona Swart."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"
 * identifier.value = "3e594fe5-3ed5-4305-a214-99c87e1f3bfa"

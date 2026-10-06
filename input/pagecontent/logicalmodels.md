@@ -2,7 +2,7 @@
 
 The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developed a set of logical data models, also referred to as information models, that are intended to support the future European Health Data Space (EHDS) Implementing Acts.
 
-These models represent refined interpretations of the data sets described in the [**eHealth Network Guideline on Hospital Discharge Report**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines). This Implementation Guide aims to align the Hospital Discharge Report specification with the relevant EHDS logical models and to provide HL7 FHIR profiles that realise the requirements identified in those models.
+These models represent refined interpretations of the data sets described in the [**eHealth Network Guideline on Hospital Discharge Report**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines). This Implementation Guide aims to align the Discharge Report specification with the relevant EHDS logical models and to provide HL7 FHIR profiles that realise the requirements identified in those models.
 
 The logical models listed below are those used by this guide, starting from the Xt-EHR `EHDSDischargeReport` model and the models directly referred to by it. Generic base models, such as `EHDSDocument` and `EHDSDataSet`, are not listed here.
 
@@ -23,7 +23,7 @@ The logical models listed below are those used by this guide, starting from the 
 
 | **Model** | **Description** |
 | --- | --- |
-| [EHDSDischargeReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html) | Generic model for discharge reports. This guide constrains and implements it for the Hospital Discharge Report use case. |
+| [EHDSDischargeReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html) | Generic model for discharge reports. This guide implements it as a generic discharge report, usable for any kind of encounter. |
 
 ---
 
@@ -35,7 +35,7 @@ The logical models listed below are those used by this guide, starting from the 
 | [EHDSRelatedPerson](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSRelatedPerson.html) | Intended recipient or related person involved in the discharge report context. |
 | [EHDSHealthProfessional](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSHealthProfessional.html) | Author, attester, legal authenticator, performer, or other health professional role. |
 | [EHDSOrganisation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSOrganisation.html) | Organisation involved in the document header, care provision, custody, or intended communication. |
-| [EHDSEncounter](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSEncounter.html) | Encounter information for the hospital episode described by the report. |
+| [EHDSEncounter](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSEncounter.html) | Encounter information for the episode of care (e.g. hospital stay, emergency department visit, day-care episode) described by the report. |
 | [EHDSDevice](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDevice.html) | Device acting as author or attester, and device used by the patient (via EHDSDeviceUse). |
 
 ---

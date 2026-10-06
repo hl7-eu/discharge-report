@@ -1,6 +1,6 @@
-Profile: RelatedPersonEuHdrObligation
+Profile: RelatedPersonEuDrObligation
 Parent: RelatedPerson
-Id: relatedPerson-obl-eu-hdr
+Id: relatedPerson-obl-eu-dr
 Title: "RelatedPerson: obligations"
 Description: "This profile defines obligations for a related person in FHIR for the purpose of this guide."
 

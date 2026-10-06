@@ -1,7 +1,7 @@
 Instance: HDR-Luigi-De-Luca-Example
-InstanceOf: BundleEuHdr
+InstanceOf: BundleEuDr
 Title: "Bundle: HDR Type 2 Diabetes Mellitus"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
+Description: "HL7 FHIR Bundle example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Luigi De Luca."
 Usage: #example
 
 * language = #en
@@ -135,7 +135,7 @@ Usage: #inline
 * address.country = "it"
 
 Instance: encounter-luca-example
-InstanceOf: EncounterEuHdr
+InstanceOf: EncounterEuDr
 Title: "Encounter: Inpatient stay for prediabetes"
 Description: "Inpatient encounter from 2025-04-01 to 2025-04-10, with prediabetes as reason."
 Usage: #inline
@@ -150,9 +150,9 @@ Usage: #inline
 * serviceType = $sct#171183004 "Diabetes mellitus screening (procedure)"
 
 Instance: composition-hdr-luca-example
-InstanceOf: CompositionEuHdr
+InstanceOf: CompositionEuDr
 Title: "Composition: HDR Type 2 Diabetes Mellitus"
-Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
+Description: "HL7 FHIR Composition example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Luigi De Luca"
 Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -247,7 +247,7 @@ Usage: #example
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital course note"
+* section[sectionCourseOfEncounter].title = "Hospital course note"
 * section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #additional
 * section[=].text.div = """
@@ -454,7 +454,7 @@ Usage: #example
 * onsetDateTime = "2025-04-04"
 
 Instance: careplan-luca
-InstanceOf: CarePlanEuHdr
+InstanceOf: CarePlanEuDr
 Title: "CarePlan: Diabetes Management Plan"
 Description: "Care plan for diabetes management, including referrals and HbA1c measurement."
 Usage: #example
@@ -639,7 +639,7 @@ Usage: #inline
 * note[0].text = "Patient smokes a few cigarettes a day"
 
 Instance: metformin-luca
-InstanceOf: MedicationAdministrationEuHdr
+InstanceOf: MedicationAdministrationEuDr
 Title: "MedicationAdministration: Metformin 500 mg"
 Description: "Administration of metformin hydrochloride 500 mg prolonged-release tablets, twice a day."
 Usage: #inline

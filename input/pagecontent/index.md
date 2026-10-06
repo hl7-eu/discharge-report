@@ -30,16 +30,22 @@
 
 ### Scope
 
-This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** context, based on the Xt-EHR EHDS logical models, which refine the eHealth Network Guideline on Hospital Discharge Report (eHN HDR Guidelines; see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
+This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Discharge Report** in the **European** context, based on the Xt-EHR EHDS logical models (`EHDSDischargeReport`), which refine and generalise the eHealth Network Guideline on Hospital Discharge Report (eHN HDR Guidelines; see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
 
-Its main goal is to define the content components and preferred structure for composing a Hospital Discharge Report. 
+A Discharge Report summarises the care provided to a patient during a healthcare encounter and the information needed to ensure continuity of care after discharge. This guide is not limited to inpatient hospital stays: it covers any kind of encounter that ends with a discharge, for example a **hospital stay**, an **emergency department visit**, a **day-care** episode, a **rehabilitation** stay or an **ambulatory** specialist episode.
 
-This includes both jurisdictional and cross-border scenarios. 
+Its main goal is to define the content components and preferred structure for composing a Discharge Report, as a common framework that can be further specialised for specific kinds of discharge report and care settings.
+
+This includes both jurisdictional and cross-border scenarios.
 
 This guide doesn't describe how this report is exchanged.
 
+### Relationship with the Hospital Discharge Report IG
+
+This guide is derived from the [HL7 Europe Hospital Discharge Report (HDR) FHIR IG](http://hl7.eu/fhir/hdr) version 1.0.0. The hospital discharge report is now one of the kinds of discharge report covered by this guide; see the [Change Log](changes.html) for the differences with the HDR IG.
+
 ### Purpose
-The goal of this Implementation Guide is to define a common European specification for the Hospital Discharge Report, facilitating harmonisation across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
+The goal of this Implementation Guide is to define a common European specification for the Discharge Report, facilitating harmonisation across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
 
 This project is promoted by HL7 Europe and developed in collaboration with several other European and national organisations and projects.
 

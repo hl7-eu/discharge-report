@@ -1,6 +1,6 @@
-Profile: PatientEuHdrObligation
+Profile: PatientEuDrObligation
 Parent: PatientEuCore
-Id: patient-obl-eu-hdr
+Id: patient-obl-eu-dr
 Title: "Patient: obligations"
 Description: "This profile defines obligations for a human Patient in FHIR for the purpose of this guide."
 

@@ -1,6 +1,6 @@
-Profile: OrganizationEuHdrObligation
+Profile: OrganizationEuDrObligation
 Parent: OrganizationEuCore
-Id: organization-obl-eu-hdr
+Id: organization-obl-eu-dr
 Title: "Organization: obligations"
 Description: "This profile defines obligations for an organisation in FHIR for the purpose of this guide."
 

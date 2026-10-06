@@ -1,7 +1,7 @@
 Instance: HDR-Reijer-Wolff-Example
-InstanceOf: BundleEuHdr
+InstanceOf: BundleEuDr
 Title: "Bundle: HDR Lower Leg Fracture"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
+Description: "HL7 FHIR Bundle example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Reijer Wolff."
 Usage: #example
 
 * language = #en
@@ -44,9 +44,9 @@ Usage: #example
 * entry[=].resource = cefazolin
 
 Instance: composition-hdr-wolff-example
-InstanceOf: CompositionEuHdr
+InstanceOf: CompositionEuDr
 Title: "Composition: HDR Lower Leg Fracture"
-Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
+Description: "HL7 FHIR Composition example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Reijer Wolff."
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -131,7 +131,7 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital course note"
+* section[sectionCourseOfEncounter].title = "Hospital course note"
 * section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #generated
 * section[=].text.div = """
@@ -215,7 +215,7 @@ Usage: #inline
 * address.country = "nl"
 
 Instance: encounter-wolff-example
-InstanceOf: EncounterEuHdr
+InstanceOf: EncounterEuDr
 Title: "Encounter: Hospital admission and discharge, Reijer Wolff"
 Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #example
@@ -253,7 +253,7 @@ Usage: #inline
 * performedDateTime = "2025-04-23"
 
 Instance: paracetamol
-InstanceOf: MedicationAdministrationEuHdr
+InstanceOf: MedicationAdministrationEuDr
 Title: "MedicationAdministration: Paracetamol"
 Description: "A sample MedicationAdministration resource for Paracetamol."
 Usage: #example
@@ -264,7 +264,7 @@ Usage: #example
 * effectiveDateTime = "2025-04-21"
 
 Instance: cefazolin
-InstanceOf: MedicationAdministrationEuHdr
+InstanceOf: MedicationAdministrationEuDr
 Title: "MedicationAdministration: Cefazolin"
 Description: "A sample MedicationAdministration resource for Cefazolin."
 Usage: #inline

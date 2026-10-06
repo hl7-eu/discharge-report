@@ -1,7 +1,7 @@
 Instance: DischargeBundle-Novak-Petr-Subsections
-InstanceOf: BundleEuHdr
+InstanceOf: BundleEuDr
 Title: "Bundle: HDR Inguinal Hernia with Sub-sections (Czech)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) with structured composition for Czech patient Petr Novák."
+Description: "HL7 FHIR Bundle example of a Hospital Discharge Report (HL7 Europe Discharge Report) for with structured composition for Czech patient Petr Novák."
 Usage: #example
 
 * language = #cs
@@ -120,9 +120,9 @@ Usage: #example
 * entry[flag][=].resource = Flag-malnutrition-Novak
 
 Instance: DischargeComposition-Novak-Petr-Subsections
-InstanceOf: CompositionEuHdr
+InstanceOf: CompositionEuDr
 Title: "Composition: HDR Inguinal Hernia with Sub-sections (Czech)"
-Description: "HL7 EU HDR Composition with sub-sections for patient Novák Petr"
+Description: "Hospital Discharge Report Composition (HL7 Europe Discharge Report) with sub-sections for patient Novák Petr"
 Usage: #inline
 * language = #cs
 * id = "701f51d5-78bf-428e-a6b5-349c2614ce07"
@@ -222,16 +222,16 @@ Usage: #inline
 * section[sectionMedicalDevices].entry[1] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000020) // Example reference to another medical device
 
 //Sekce Průběh hospitalizace - klinické shrnutí
-* section[sectionHospitalCourse].title = "Klinické shrnutí"
-* section[sectionHospitalCourse].code = $loinc#8648-8 "průběh hospitalizace" //"Hospital course note"
-* section[sectionHospitalCourse].text.div = """<div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+* section[sectionCourseOfEncounter].title = "Klinické shrnutí"
+* section[sectionCourseOfEncounter].code = $loinc#8648-8 "průběh hospitalizace" //"Hospital course note"
+* section[sectionCourseOfEncounter].text.div = """<div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
   Pacient byl přijat dne 1. 3. 2025 na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Během hospitalizace byla provedena předoperační příprava včetně laboratorních vyšetření a interního předoperačního vyšetření.
   Dne 2. 3. 2025 byla v celkové anestezii provedena operace – plastika pravostranné tříselné kýly. Operační výkon proběhl bez komplikací. Pacient byl pooperačně stabilní, bez známek infekce rány.
   V rámci hospitalizace byla u pacienta sledována substituční léčba hypotyreózy (Euthyrox 75 µg denně), bez nutnosti úpravy dávkování. Hodnota TSH při přijetí v normě.
   Pacient byl v dobrém stavu propuštěn do domácího ošetření dne 10. 3. 2025. Doporučena klidová režimová opatření, kontrola v chirurgické ambulanci za 7 dní.
   </div>""" // Added required text for cardinality
-* section[sectionHospitalCourse].text.status = #additional //Additional text status for generated narrative /HONza
-* section[sectionHospitalCourse].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
+* section[sectionCourseOfEncounter].text.status = #additional //Additional text status for generated narrative /HONza
+* section[sectionCourseOfEncounter].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620) // encounter
 
 // --- DischargeDetails – subsections added ---
 // Sekce pro poznámku k propuštění sectionDischargeDetails
@@ -679,7 +679,7 @@ Description: "Example of patient Petr Novák, identified by Czech national ident
 
 
 Instance: HospitalEncounter-Novak-Petr
-InstanceOf: EncounterEuHdr
+InstanceOf: EncounterEuDr
 Usage: #inline
 Title: "Encounter: Hospital stay with emergency priority"
 Description: "Czech HDR example of an inpatient encounter with emergency priority"
@@ -881,7 +881,7 @@ Usage: #inline
 
 //----------------------------------------
 Instance: CarePlan-Novak
-InstanceOf: CarePlanEuHdr
+InstanceOf: CarePlanEuDr
 Usage: #inline
 Title: "CarePlan: Inguinal hernia care plan"
 Description: "Czech HDR example of a care plan after inguinal hernia repair"
@@ -1281,7 +1281,7 @@ Description: "Ibalgin 400 tablets"
 * identifier[0].value = "0207893"
 
 Instance: MedicationDispense-Ibalgin400
-InstanceOf: MedicationDispenseEuHdr
+InstanceOf: MedicationDispenseEuDr
 Usage: #inline
 Title: "MedicationDispense: Ibalgin 400"
 Description: "Dispense of the medicinal product Ibalgin 400 mg to patient Novák"
@@ -1375,7 +1375,7 @@ Description: "HDR example of a medication statement: Ibalgin 400"
 
 
 Instance: MedicationDispense-Euthyrox
-InstanceOf: MedicationDispenseEuHdr
+InstanceOf: MedicationDispenseEuDr
 Usage: #inline
 Title: "MedicationDispense: Euthyrox"
 Description: "Dispense of the medicinal product Euthyrox to patient Novák"
@@ -1390,7 +1390,7 @@ Description: "Dispense of the medicinal product Euthyrox to patient Novák"
 
 
 Instance: MedicationDispense-Paracetamol
-InstanceOf: MedicationDispenseEuHdr
+InstanceOf: MedicationDispenseEuDr
 Usage: #inline
 Title: "MedicationDispense: Paracetamol"
 Description: "Dispense of the medicinal product Paracetamol to patient Novák"
@@ -1501,7 +1501,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 
 
 Instance: DeviceUseStatement-Pacemaker
-InstanceOf: DeviceUseStatementEuHdr
+InstanceOf: DeviceUseStatementEuDr
 Usage: #inline
 Title: "DeviceUseStatement: Pacemaker"
 Description: "Record of a pacemaker implanted because of bradycardia"
@@ -1517,7 +1517,7 @@ Description: "Record of a pacemaker implanted because of bradycardia"
 
 //----------------------------------------------------------------------------------------
 Instance: Device-Pacemaker
-InstanceOf: DeviceEuHdr
+InstanceOf: DeviceEuDr
 Usage: #inline
 Title: "Device: Pacemaker Medtronic W1DR01"
 Description: "Heart pacemaker Medtronic W1DR01"

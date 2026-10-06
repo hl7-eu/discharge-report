@@ -1,9 +1,9 @@
 // --------------------------------------------------
-ValueSet:   AdmissionUrgencyHdrVS
-Id:         admission-urgency-eu-hdr
+ValueSet:   AdmissionUrgencyDrVS
+Id:         admission-urgency-eu-dr
 Title:      "Admission Urgency Value Set"
-Description:  """Hospital Discharge Report Admission Urgency value set includes selected codes from HL7 v3-ActPriority code system."""
-* insert SetFmmAndStatusRule (2, trial-use)
+Description:  """Discharge Report Admission Urgency value set includes selected codes from HL7 v3-ActPriority code system."""
+* insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
 * $v3-ActPriority#EL "elective"
 * $v3-ActPriority#EM "emergency"

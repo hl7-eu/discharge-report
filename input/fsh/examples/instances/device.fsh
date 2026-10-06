@@ -1,7 +1,7 @@
 Instance: example-deviceusestatement-euhdr
-InstanceOf: DeviceUseStatementEuHdr
+InstanceOf: DeviceUseStatementEuDr
 Title: "DeviceUseStatement: Implanted Pacemaker"
-Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the hospital discharge report."
+Description: "A DeviceUseStatement documenting the use of an implanted pacemaker in the discharge report."
 
 * status = #active
 
@@ -34,7 +34,7 @@ Description: "A DeviceUseStatement documenting the use of an implanted pacemaker
 
 
 Instance: pacemaker-001
-InstanceOf: DeviceEuHdr
+InstanceOf: DeviceEuDr
 Title: "Device: Implantable Pacemaker"
 Description: "A sample Device resource for an implantable pacemaker, referenced in a DeviceUseStatement."
 

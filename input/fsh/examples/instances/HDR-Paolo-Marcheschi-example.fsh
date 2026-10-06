@@ -1,7 +1,7 @@
 Instance: HDR-Paolo-Marcheschi-Example
-InstanceOf: BundleEuHdr
+InstanceOf: BundleEuDr
 Title: "Bundle: HDR Acute Respiratory Failure (Italian)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
+Description: "HL7 FHIR Bundle example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Paolo Marcheschi."
 Usage: #example
 
 * language = #it
@@ -83,12 +83,12 @@ Usage: #inline
 * address[=].postalCode = "57126"
 
 Instance: composition-ftgm-discharge-letter
-InstanceOf: CompositionEuHdr
+InstanceOf: CompositionEuDr
 Title: "Composition: HDR Acute Respiratory Failure (Italian)"
-Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
+Description: "HL7 FHIR Composition example of a Hospital Discharge Report (HL7 Europe Discharge Report) for Paolo Marcheschi."
 Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
-// Individual resource language matching the main language of the Bundle (bdl-hdr-2)
+// Individual resource language matching the main language of the Bundle (bdl-dr-2)
 * language = #it
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:7cb81527-2474-4c4d-ba2e-85a1dc903b0d"
@@ -145,7 +145,7 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Decorso ospedaliero"
+* section[sectionCourseOfEncounter].title = "Decorso ospedaliero"
 * section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">All'ingresso in reparto il paziente era stabile da un punto di vista emodinamico, apiretico ma sintomatico per dispnea da sforzo e dolore toracico anteriore in particolare in relazione agli atti respiratori e alla tosse. Al controllo ecocardiografico riscontro di normale funzione sistolica biventricolare. Agli esami ematici incremento degli indici di flogosi. Eseguita TC Torace che ha evidenziato un quadro compatibile con patologia flogistica polmonare in atto di verosimile origine virale con possibile sovrainfezione batterica a livello del lobo medio e nelle regioni dorsali dei lobi inferiori. E' stata pertanto confermata la terapia domiciliare associando, come da valutazione infettivologica, terapia antibiotica empirica ad ampio spettro (linezolid, doxicilina e piperacillina/tazobactam), cortisone per via sistemica ed ossigenoterapia. Veniva inoltre programmata broncoscopia con BAL, eseguita il giorno 28.08, con riscontro di positività per  Citomegalovirus (CMV) DNA ad alto titolo, e PCR per Pneumocystis Jiroveci con esame diretto negativo. Veniva quindi introdotta terapia mirata con ganciclovir e trimetoprim/cotrimossazolo, monitorando la funzione epatorenale, gli  indici di flogosi e l'emocromo. Una valutazione oculista ha escluso segni di retinite. Nei giorni successivi il paziente ha continuato a presentare sporadici rialzi febbrili, pertanto, per escludere ulteriori sedi di infezione, à stata eseguita una PET/TC Total Body risultata positiva solo a carico dei noti addensamenti polmonari. Nel corso della degenza, su indicazione infettivologica, sulla base dell'andamento degli esami ematochimici, sono stati adeguati i dosaggi della terapia antivirale ed antibiotica e su indicazione della Trapiantologia di Siena adeguata la posologia della terapia immunosoppressiva sulla base dei livelli ematici di tacrolimus ed everolimus. Nel corso della degenza il paziente ha presentato un progressivo miglioramento delle condizioni cliniche, dei parametri laboratoristici e degli scambi gassosi che hanno consentito la sospensione dell'ossigenoterapia, da segnalare introduzione in terapia di insulina s.c. per scarso controllo dei valori glicemici. In data 11/09 à stato ripetuto controllo TC Torace con evidenza di parziale regressione delle note lesioni polmonari e comparsa di piccole aree consolidative di verosimile natura flogistica a carico del LISn e della lingula. Alla luce di tali reperti à stato ripetuta broncoscopia con  BAL con conferma della positività, seppure a titolo ridotto, del CMV DNA (sempre negativa la ricerca su siero). Per evidenza all'emocromo di progressiva pancitopenia con prevalente neutropenia à stata ridotta la posologia del Bactrim a dosaggio profilattico ed eseguito passaggio da ganciclovir per via orale a valganciclovir associando granulochine con buona risposta midollare. In considerazione della mancata negativizzazione del CMV DNA su BAL, della mielotossicità del ganciclovir (pur in associazione con tacrolimus , everolimus e Bactrim) e dopo discussione collegiale dei colleghi infettivologi e dei referenti trapiantologi di Siena, si à concordata prescrizione di maribavir in sostituzione del valganciclovir (nel sospetto di farmacoresistenza) da assumere a domicilio, appena in possesso del farmaco, fino a negativizzazione del CMV DNA su BAL. Sono stati, inoltre, presi contatti con la Virologia Ospedale San Raffaele di Milano per le modalità di invio del campione del BAL del 16 settembre u.s. per la ricerca della farmacoresistenze del CMV. Da decidere successivamente, anche in base al risultato delle farmacoresistenza, con quale farmaco proseguire la profilassi secondaria per la riattivazione di CMV. <p> </p>Si dimette con la raccomandazione di assumere a domicilio la terapia come pià avanti riportato e di effettuare controlli dell'emocromo e della creatinina ogni 48 ore secondo andamento. Se neutrofili &lt; 1000 cellule/mm3, contattare i medici trapiantologi per concordare terapia con Granulochine e per le eventuali variazioni della posologia del tacrolimus ed everolimus. <p> </p>Controllare l'andamento della glicemia per la eventuale sospensione delle terapia con insulina in caso di ulteriore riduzione del cortisonico.<p> </p>Appena in possesso del maribavir il paziente dovrà assumerlo con le modalità riportate nell'ultima consulenza infettivologica riportata in lettera (20/9/2024).</div>"
@@ -213,7 +213,7 @@ Usage: #inline
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Il paziente presenta numerose allergie: Anisakis, mezzo di contrasto</div>"
 
 Instance: encounter-ftgm-example
-InstanceOf: EncounterEuHdr
+InstanceOf: EncounterEuDr
 Title: "Encounter: Hospital admission and discharge, Paolo Marcheschi"
 Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #inline
@@ -232,7 +232,7 @@ Description: "Condition representing acute respiratory failure."
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
 * id = "abddc069-eda4-44c0-bd68-37e65a7bcb74"
-// Regional variant of the Bundle main language: it-IT matches it (bdl-hdr-2)
+// Regional variant of the Bundle main language: it-IT matches it (bdl-dr-2)
 * language = #it-IT
 * clinicalStatus = $condition-clinical#active
 * code[0].coding[+] = $icd10#J96.0 "Acute respiratory failure"

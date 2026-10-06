@@ -1,6 +1,6 @@
-Profile: PractitionerEuHdrObligation
+Profile: PractitionerEuDrObligation
 Parent: PractitionerEuCore
-Id: practitioner-obl-eu-hdr
+Id: practitioner-obl-eu-dr
 Title: "Practitioner: obligations"
 Description: "This profile defines obligations for a health professional represented as a Practitioner in FHIR for the purpose of this guide."
 
