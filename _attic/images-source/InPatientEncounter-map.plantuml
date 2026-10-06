@@ -1,0 +1,33 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncounter.html]]
+note top #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "location-eu" <<Profile>> [[StructureDefinition-location-eu.html]]
+"InPatientEncounter" <|. "location-eu"
+class "organization-eu" <<Profile>> [[StructureDefinition-organization-eu.html]]
+"InPatientEncounter" <|. "organization-eu"
+"location-eu" -d[hidden]-> "organization-eu"
+class "practitioner-eu-core" <<Profile>> [[StructureDefinition-practitioner-eu-core.html]]
+"InPatientEncounter" <|. "practitioner-eu-core"
+"organization-eu" -d[hidden]-> "practitioner-eu-core"
+class "practitionerRole-eu-core" <<Profile>> [[StructureDefinition-practitionerRole-eu-core.html]]
+"InPatientEncounter" <|. "practitionerRole-eu-core"
+"practitioner-eu-core" -d[hidden]-> "practitionerRole-eu-core"
+class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
+"InPatientEncounter" <|. "encounter-eu-hdr"
+"practitionerRole-eu-core" -d[hidden]-> "encounter-eu-hdr"
+@enduml

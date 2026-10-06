@@ -1,0 +1,446 @@
+id: hl7.fhir.eu.hdr
+canonical: http://hl7.eu/fhir/hdr
+name:  Hl7EuHospitalDischargeReportIg
+title: HL7 Europe Hospital Discharge Report
+description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined by the EHDS logical model.
+status: active # draft | active | retired | unknown
+version: 1.0.0 #
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2024+
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
+publisher:
+  name:  HL7 Europe
+  url: http://hl7.eu
+  # email: test@example.org
+copyright: >-
+  Copyright HL7 Europe. Licensed under creative commons public domain (CC0 1.0).
+
+# The dependencies property corresponds to IG.dependsOn. The key is the
+# package id and the value is the version (or dev/current). For advanced
+# use cases, the value can be an object with keys for id, uri, and version.
+#
+dependencies:
+  # hl7.fhir.uv.ips: current
+  xtehr.eu.ehds.models: 1.0.0
+  hl7.fhir.uv.ips: 2.0.1
+  hl7.fhir.eu.base: 2.0.1
+  hl7.fhir.uv.extensions.r4: 5.3.0
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  hl7.fhir.eu.extensions.r4:
+   uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+   version: 1.3.1
+  ihe.pharm.mpd.r4: 
+    uri: https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd
+    version: 1.0.0-comment-2
+
+#   hl7.fhir.us.mcode:
+#     id: mcode
+#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
+#     version: 1.0.0
+#
+#
+# The pages property corresponds to IG.definition.page. SUSHI can
+# auto-generate the page list, but if the author includes pages in
+# this file, it is assumed that the author will fully manage the
+# pages section and SUSHI will not generate any page entries.
+# The page file name is used as the key. If title is not provided,
+# then the title will be generated from the file name.  If a
+# generation value is not provided, it will be inferred from the
+# file name extension.  Any subproperties that are valid filenames
+# with supported extensions (e.g., .md/.xml) will be treated as
+# sub-pages.
+#
+pages:
+  index.md:
+    title: Home
+  downloads.md:
+    title: Downloads
+  logicalmodels.md:
+    title: Logical Models
+  authors.md:
+    title: Authors and contributors
+  obligations.md:
+    title: Obligations
+  knownIssues.md:
+    title: Known Issues
+  scope.md:
+    title: Scope and content
+  background.md:
+    title: Background
+  challenges.md:
+    title: Challenges
+  design.md:
+    title: Design Approach
+  references.md:
+    title: References
+ # model-map.md:
+ #   title: Model Maps
+  modelmap.xml:
+    title: Model Map Overview
+  dependencies.md:
+    title: Dependencies
+  changes.md:
+    title: Change Log
+  copyright.md:
+    title: Copyright
+  crossversionanalysis.md:
+    title: Cross version analysis
+  expansion-params.md:
+    title: Expansion Parameters
+    
+  # === MAP ====
+  map-ehdsdischargereport.xml:
+    title: EHDSDischargeReport Mapping
+  map-ehdsattachment.xml:
+    title: EHDSAttachment Mapping
+  map-ehdscareplan.xml:
+    title: EHDSCarePlan Mapping
+  map-ehdsdeviceuse.xml:
+    title: EHDSDeviceUse Mapping
+  map-ehdsdevice.xml:
+    title: EHDSDevice Mapping
+  map-ehdslaboratoryobservation.xml:
+    title: EHDSLaboratoryObservation Mapping
+  map-ehdsrelatedperson.xml:
+    title: EHDSRelatedPerson Mapping
+  map-ehdsencounter.xml:
+    title: EHDSEncounter Mapping
+
+  # HospitalDischargeReport-map.html:
+  #   title: HospitalDischargeReport Relationships
+  # Header-map.html:
+  #   title: Header Relationships
+  # Subject-map.html:
+  #   title: Subject Relationships
+  # InPatientEncounter-map.html:
+  #   title: InPatientEncounter Relationships  
+  # AdmissionEvaluation-map.html:
+  #   title: AdmissionEvaluation Relationships
+  # ObjectiveFindings-map.html:
+  #   title: ObjectiveFindings Relationships
+  # FunctionalStatus-map.html:
+  #   title: FunctionalStatus Relationships
+  # HospitalStay-map.html:
+  #   title: HospitalStay Relationships
+  # PatientHistory-map.html:
+  #   title: PatientHistory Relationships
+  # Alerts-map.html:
+  #   title: Alerts Relationships
+  # AdvanceDirectives-map.html:
+  #   title: AdvanceDirectives Relationships
+  # PlanOfCare-map.html:
+  #   title: PlanOfCare Relationships
+  # MedicationSummary-map.html:
+  #   title: MedicationSummary Relationships
+    
+
+
+# === MAP ====
+
+
+
+ # overview.md:
+ #   title: Profiles overview
+
+ #  recommendations.md:
+#    title: Recommendations
+#
+#
+# The parameters property represents IG.definition.parameter. Rather
+# than a list of code/value pairs (as in the ImplementationGuide
+# resource), the code is the YAML key. If a parameter allows repeating
+# values, the value in the YAML should be a sequence/array. For a
+# partial list of allowed parameters see:
+# https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+#
+parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+#  produce-jekyll-data: true
+#  special-url:
+#    - http://example.org/lab-codes
+
+
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# path-resource:
+#    - input/resources
+#    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - input/intro-notes
+#  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
+ # suppressed-ids: DocumentReference/discharge-summary
+ # tabbed-snapshots: false
+  # generate: #what does this do - todo: remove and see4
+  #   - xml
+  #   - json
+ # no-narrative:
+ #   - Patient/example-targeted-provenance
+ #   - Bundle/docref-example-1
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+ # version-comparison:
+ #    - 5.0.1
+ #    - 4.0.0
+
+#   excludettl: true
+#   validation: [allow-any-extensions, no-broken-links]
+#
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
+# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
+# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
+# │ property below.                                                                                │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Introduction:
+    Scope and content: scope.html
+    Background: background.html
+    Challenges: challenges.html
+    Design: design.html
+    References: references.html
+  Functional:
+    Logical Models: logicalmodels.html
+    Obligations: obligations.html
+  Implementation:
+    Model Maps: modelmap.html
+  About:
+    Authors and contributors: authors.html
+    Dependencies: dependencies.html
+    Change Log: changes.html
+    Copyright: copyright.html
+    Cross version:  crossversionanalysis.html
+    Downloads: downloads.html
+    Known Issues: knownIssues.html
+  Artifacts: artifacts.html
+
+# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
+# │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
+# │  resource. These properties are less commonly needed than those above.                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+#
+# Those who need more control or want to add additional details to the contact values can use
+# contact directly and follow the format outlined in the ImplementationGuide resource and
+# ContactDetail.
+#
+# contact:
+#   - name:  Bob Smith
+#     telecom:
+#       - system: email # phone | fax | email | pager | url | sms | other
+#         value: bobsmith@example.org
+#         use: work
+#
+#
+# The global property corresponds to the IG.global property, but it
+# uses the type as the YAML key and the profile as its value. Since
+# FHIR does not explicitly disallow more than one profile per type,
+# neither do we; the value can be a single profile URL or an array
+# of profile URLs. If a value is an id or name, SUSHI will replace
+# it with the correct canonical when generating the IG JSON.
+#
+# global:
+#   Patient: http://example.org/fhir/StructureDefinition/my-patient-profile
+#   Encounter: http://example.org/fhir/StructureDefinition/my-encounter-profile
+#
+#
+# The resources property corresponds to IG.definition.resource.
+# SUSHI can auto-generate all of the resource entries based on
+# the FSH definitions and/or information in any user-provided
+# JSON or XML resource files. If the generated entries are not
+# sufficient or complete, however, the author can add entries
+# here. If the reference matches a generated entry, it will
+# replace the generated entry. If it doesn't match any generated
+# entries, it will be added to the generated entries. The format
+# follows IG.definition.resource with the following differences:
+#   * use IG.definition.resource.reference.reference as the YAML key.
+#   * if the key is an id or name, SUSHI will replace it with the
+#     correct URL when generating the IG JSON.
+#   * specify "omit" to omit a FSH-generated resource from the
+#     resource list.
+#   * if the exampleCanonical is an id or name, SUSHI will replace
+#     it with the correct canonical when generating the IG JSON.
+#   * groupingId can be used, but top-level groups syntax may be a
+#     better option (see below).
+# The following are simple examples to demonstrate what this might
+# look like:
+
+# resources:
+
+#------------ Concept Maps  -------------
+#  ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
+#    name: DiagnosticReport to Composition status
+#    description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
+
+
+#------------ Logical Models -------------
+
+#  StructureDefinition/Subject:
+#    name: A.1.1, A.1.2 - Subject of care
+#    description: Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.
+
+#----------- Examples -------------
+#  Specimen/Specimen-animal-example:
+#    name: "Specimen: animal example"
+#    description: Example of Specimen collected from an animal.
+
+# -------------  Obligations
+# StructureDefinition/Patient-obl-eu-lab:
+#   name: Patient Obligations
+#   description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
+
+
+#  Patient/my-example-patient:
+#    name: My Example Patient
+#    description: An example Patient
+#    exampleBoolean: true
+#  Patient/bad-example: omit
+
+
+#
+# Groups can control certain aspects of the IG generation.  The IG
+# documentation recommends that authors use the default groups that
+# are provided by the templating framework, but if authors want to
+# use their own instead, they can use the mechanism below.  This will
+# create IG.definition.grouping entries and associate the individual
+# resource entries with the corresponding groupIds. If a resource
+# is specified by id or name, SUSHI will replace it with the correct
+# URL when generating the IG JSON.
+#
+groups:
+
+
+    eHNHospitalDishargeReport:
+      name:  Hospital Discharge Report
+      description: Hospital Discharge Report entry profiles.
+      resources:
+        - StructureDefinition/bundle-obl-eu-hdr
+        - StructureDefinition/composition-obl-eu-hdr
+
+
+#    eHNGuidelines:
+#      name:  eHN Hospital Discharge Report Guidelines (Informative)
+#      description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
+#      resources:
+#        - StructureDefinition/HospitalDischargeReport
+#        - StructureDefinition/Header
+#        - StructureDefinition/Subject
+#        - StructureDefinition/AdvanceDirectives
+#        - StructureDefinition/Alerts
+#        - StructureDefinition/InPatientEncounter
+#        - StructureDefinition/AdmissionEvaluation
+#        - StructureDefinition/PatientHistory
+#        - StructureDefinition/HospitalStay
+#        - StructureDefinition/DischargeDetails
+#        - StructureDefinition/ObjectiveFindings
+#        - StructureDefinition/FunctionalStatus
+#        - StructureDefinition/PlanOfCare
+#        - StructureDefinition/MedicationSummary
+##  
+#    logicalModelsMaps:
+#      name:  eHN Logical Model mappings (Informative)
+#      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
+#      resources:
+#        - ConceptMap/hdr2FHIR-eu-hdr
+#        - ConceptMap/hdrHeader2FHIR-eu-hdr
+#        - ConceptMap/subject2FHIR-eu-hdr
+#        - ConceptMap/encounter2FHIR-eu-hdr
+#        - ConceptMap/alerts2FHIR-eu-hdr
+#        - ConceptMap/advanceDirectives2FHIR-eu-hdr
+#        - ConceptMap/planOfCare2FHIR-eu-hdr
+#        - ConceptMap/medicationSummary2FHIR-eu-hdr
+
+#  
+    obligations:
+      name:  Obligations (Informative)
+      description: Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
+      resources:
+        - StructureDefinition/allergyIntolerance-obl-eu-hdr        
+        - StructureDefinition/patient-obl-eu-hdr
+        - StructureDefinition/organization-obl-eu-hdr
+        - StructureDefinition/practitioner-obl-eu-hdr
+        - StructureDefinition/practitionerRole-obl-eu-hdr
+        - StructureDefinition/relatedPerson-obl-eu-hdr
+        - StructureDefinition/specimen-obl-eu-hdr
+        - StructureDefinition/carePlan-obl-eu-hdr        
+        - StructureDefinition/condition-obl-eu-hdr          
+        - StructureDefinition/device-obl-eu-hdr
+        - StructureDefinition/deviceUseStatement-obl-eu-hdr
+        - StructureDefinition/encounter-obl-eu-hdr
+        - StructureDefinition/flag-obl-eu-hdr
+        - StructureDefinition/immunization-obl-eu-hdr  
+        - StructureDefinition/medication-obl-eu-hdr
+        - StructureDefinition/medicationAdministration-obl-eu-hdr
+        - StructureDefinition/medicationDispense-obl-eu-hdr
+        - StructureDefinition/medicationRequest-obl-eu-hdr
+        - StructureDefinition/medicationStatement-obl-eu-hdr
+        - StructureDefinition/laboratoryObservation-obl-eu-hdr
+        - StructureDefinition/observation-obl-eu-hdr
+        - StructureDefinition/procedure-obl-eu-hdr
+
+
+#
+# The ImplementationGuide resource defines several other properties
+# not represented above. These properties can be used as-is and
+# should follow the format defined in ImplementationGuide:
+# * date
+# * meta
+# * implicitRules
+# * language
+# * text
+# * contained
+# * extension
+# * modifierExtension
+# * experimental
+# * useContext
+# * copyright
+# * packagingId
+#
+#
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# The FSHOnly flag indicates if only FSH resources should be exported.
+# If set to true, no IG related content will be generated.
+# The default value for this property is false.
+#
+# FSHOnly: false
+#
+#
+# When set to true, the "short" and "definition" field on the root element of an Extension will
+# be set to the "Title" and "Description" of that Extension. Default is true.
+#
+# applyExtensionMetadataToRoot: true
+#
+#
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+# See the individual option definitions below for more detail.
+
+instanceOptions:
+  manualSliceOrdering: true
+#
+# instanceOptions:
+#   Determines for which types of Instances SUSHI will automatically set meta.profile
+#   if InstanceOf references a profile:
+#
+#   setMetaProfile: always # always | never | inline-only | standalone-only
+#
+#
+#   Determines for which types of Instances SUSHI will automatically set id
+#   if InstanceOf references a profile:
+#
+#   setId: always # always | standalone-only

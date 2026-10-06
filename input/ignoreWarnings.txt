@@ -1,0 +1,137 @@
+== Suppressed Messages ==
+# Add warning and/or information messages here after you've confirmed that they aren't really a problem
+# (And include comments like this justifying why)
+# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# False positive: the reference FHIRPath engine incorrectly infers split() as a singleton instead of an ordered collection.
+bdl-hdr-2: Found a use of a collection operator on something that is not a collection at 'split('-').first().lower()' - check that there's no mistakes in the expression syntax
+
+# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
+Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
+
+
+# Obligation extension (information messages, one per obligation in the snapshots of the obligation profiles):
+# the IG Publisher adds the tooling sub-extension http://hl7.org/fhir/tools/StructureDefinition/snapshot-source
+# (source profile of the obligation) to every obligation extension copied into a snapshot. This sub-extension is not
+# a slice of http://hl7.org/fhir/StructureDefinition/obligation (hl7.fhir.uv.extensions.r4#5.3.0, open slicing).
+# The HDR obligations only use the code and actor sub-extensions, which match the defined slices.
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
+
+# Luigi De Luca example: the two FamilyMemberHistory entries are referenced by an additional top-level
+# "Family History" section (allowed by the open section slicing) and are kept on purpose; BundleEuHdr has no
+# familyMemberHistory entry slice (information message). Note: this also hides other Bundle entries not matching a slice.
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr%
+
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# usage of SNOMED CT
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+
+# Examples are no needed for obligation profiles
+%-obl-eu-hdr'): The Implementation Guide contains no examples for this%
+
+
+# example url that doesn't resolve
+%A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' version '2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated.%
+
+
+# no performers in the examples
+Best Practice Recommendation: In general, all observations should have a performer
+
+
+# UCOM annotation in examples
+UCUM Codes that contain human readable annotations like {keer per dag inhaleren} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+
+
+# not fixed version used
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/event-basedOn'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-detail'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-priority'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-citizenship'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'.%
+
+
+# The repeating element with a pattern
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+
+# > and < chars interpreted as html tags
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+
+# The Vital signs section allows for both Observation and Vital Signs entries
+Found multiple matching profiles for urn:uuid:f0113857-b9b7-429b-8893-b645a38ae20a among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:065c918f-730a-47f8-938a-7ad54618037b among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:81783ae4-c36d-424f-8cea-fe7d3407a36b among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:a19e48e1-2271-4cdb-9c76-b0626c7a5363 among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c7d among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+
+
+# known non-matching slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationRequest-eu-core%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationStatement-eu-core%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core%
+
+
+# not known identification systems
+No definition could be found for URL value 'https://hl7europe.org/example-identifier'
+No definition could be found for URL value 'https://example.hospital.org/sid/compositions'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krpzs'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icp'
+
+No definition could be found for URL value 'urn:ietf:rfc:4122'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/agb-z'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn'
+No definition could be found for URL value 'https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky'
+
+# multiple different potential versions matches
+TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS
+
+# CodeSystem version not pinned
+PIN_VERSION
+
+# Deprecated extensions not specified by this guide
+MSG_DEPENDS_ON_DEPRECATED_NOTE
+
+# Code not defined in the addional binding
+Terminology_TX_NoValid_3_CC
+
+# No valid display name for cs language
+NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK
+There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'cs'. The display is 'Inpatient encounter' which is a valid display for the default language
+
+# Draft code system used
+MSG_DRAFT
+
+# OID not assigned
+%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
+
+# XtEHR Logical model is specified using HL7 FHIR R5 (no issues)
+This IG is version 4.0.1, while the IG 'xtehr.eu.ehds.models' is from version 5.0.0
+The ImplementationGuide is based on FHIR version 4.0.1 but package xtehr.eu.ehds.models#1.0.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+# No keys defined for Additional Binding
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
+
+# Duplicate anchor Ids
+The html source has duplicate anchor Ids: 3f85726c-ad2f-441b-89ce-100000000000,Patient_3f85726c-ad2f-441b-89ce-100000000000,hc3f85726c-ad2f-441b-89ce-100000000000
+
+# Not found system
+No definition could be found for URL value 'http://standardterms.edqm.eu'
+Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://www.orpha.net' could not be found, so the value set cannot be expanded
+
+# OID not assigned for this guide
+%should have an OID assigned to cater for possible use with OID based terminology systems%

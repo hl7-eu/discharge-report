@@ -1,0 +1,27 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "ObjectiveFindings" <<LogicalModel>> [[StructureDefinition-ObjectiveFindings.html]]
+note top #PaleTurquoise [[ConceptMap-objectiveFindings2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"ObjectiveFindings" <|. "composition-eu-hdr"
+class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
+"ObjectiveFindings" <|. "Observation"
+"composition-eu-hdr" -d[hidden]-> "Observation"
+class "vitalsigns" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/vitalsigns]]
+"ObjectiveFindings" <|. "vitalsigns"
+"Observation" -d[hidden]-> "vitalsigns"
+@enduml
