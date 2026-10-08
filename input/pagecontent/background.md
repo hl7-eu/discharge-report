@@ -21,7 +21,9 @@ The EHDS regulation defines a framework to:
 A key role in the regulation is played by the **European EHR eXchange Format** (EEHRxF), defined as a format that is *"commonly used, machine-readable, and allowing transmission of personal electronic health data between different software applications, devices and healthcare providers. The format should support transmission of structured and unstructured health data."*
 
 When the regulation enters into application, EHR-systems will be required to support the EEHRxF for providing and receiving personal electronic health data under a **priority category for primary use** established under the EHDS Regulation. 
-The six priority categories are summarized in the following picture, including **discharge reports**, which are the subject of this guide.
+The six priority categories, listed in Article 14 of the EHDS Regulation, are summarized in the following picture, including **discharge reports**, which are the subject of this guide.
+
+The EHDS treats 'discharge reports' as a single priority category, covering any kind of encounter that ends with a discharge, for example a hospital stay, an emergency department visit, a day-care episode, a rehabilitation stay or an ambulatory specialist episode.
 
 <div>
 <img src="ehds-domain.png" class="figure-img img-responsive img-rounded center-block" width="70%">
@@ -29,6 +31,8 @@ The six priority categories are summarized in the following picture, including *
 </div>
 
 The EEHRxF will be defined by the European Commission through a set of Implementing Acts; proposals supporting these acts have been prepared by the [Xt-EHR Joint Action](https://www.xt-ehr.eu/).
+
+Among these proposals, Xt-EHR has defined the EHDS logical models for the priority categories, including the EHDS logical model for the discharge report ([`EHDSDischargeReport`](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html)). This guide fulfils the requirements of that logical model by using HL7 FHIR.
 
 
 ### EEHRxF: not a one-size-fits-all solution
@@ -45,8 +49,4 @@ The following figure summarizes this layered approach.
 <p><strong>Fig. 3: EEHRxF proposed IG approach</strong></p>
 </div>
 
-### A result of a collaborative effort
-
-This activity has been carried out in a neutral working space by engaging EEHRxF-related initiatives (Xt-EHR, MyHealth@EU Architecture WG, EU-funded projects), national and regional agencies, relevant stakeholders, and interested communities (e.g. EU HL7 Affiliates, IHE Europe).
-
-224 individual contributors from 29 countries contributed to this result.
+Within this ecosystem, this guide is the common European baseline for the 'discharge reports' priority category. It is intentionally generic: the information needed to report a hospital stay, an emergency department visit or a rehabilitation stay differs in its level of detail, in its sections and in the clinical vocabulary it uses. Real-world implementations are therefore expected to build on this guide through specialisations for the specific kinds of discharge report and care settings, defined at European, national or domain level.

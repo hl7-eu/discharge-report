@@ -135,3 +135,7 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://w
 
 # OID not assigned for this guide
 %should have an OID assigned to cater for possible use with OID based terminology systems%
+%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)%
+
+# Draft CodeSystem (THO medication-statement-category) referenced by the active EU base ValueSet medicationIntendedUse-eu: not under the control of this guide
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medication-statement-category|4.0.1 from active ValueSet http://hl7.eu/fhir/base/ValueSet/medicationIntendedUse-eu|2.0.1

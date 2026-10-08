@@ -145,6 +145,9 @@ Usage: #inline
 * attester[0].mode = #legal
 * attester[0].time = "2025-03-10T14:30:00+01:00"
 * attester[0].party = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Attester is the same as one of the authors
+// Explicit narrative without headings: the generated one has an <h4> 'Attesters' that breaks the heading order of the document page (WCAG)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p><b>Propouštěcí zpráva pacienta Novák Petr</b>, 10.03.2025 14:30</p><p>Autor: MUDr. Ivan Anděl, Nemocnice Chrudim. Ověřil (právně): MUDr. Ivan Anděl, 10.03.2025 14:30. Správce: Nemocnice Chrudim.</p></div>"
 
 //Urgentní informace
 /// Sekce Alergie

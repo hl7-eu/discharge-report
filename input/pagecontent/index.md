@@ -30,11 +30,14 @@
 
 ### Scope
 
-This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Discharge Report** in the **European** context. It addresses the 'discharge reports' priority category of personal electronic health data listed in Article 14 of the [European Health Data Space Regulation](http://data.europa.eu/eli/reg/2025/327/oj) (EHDS), in line with the Xt-EHR EHDS logical model for the discharge report ([`EHDSDischargeReport`](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html)).
+This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Discharge Report** in the **European** context, as defined by EHDS logical model for the discharge report ([`EHDSDischargeReport`](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html)); in accordance with the 'discharge reports' priority category of personal electronic health data listed in by Article 14 of the [European Health Data Space Regulation](http://data.europa.eu/eli/reg/2025/327/oj) (EHDS).
 
-A Discharge Report summarises the care provided to a patient during a healthcare encounter and the information needed to ensure continuity of care after discharge. This guide is not limited to inpatient hospital stays: it covers any kind of encounter that ends with a discharge, for example a **hospital stay**, an **emergency department visit**, a **day-care** episode, a **rehabilitation** stay or an **ambulatory** specialist episode.
+A Discharge Report summarises the care provided to a patient during a healthcare encounter and the information needed to ensure continuity of care after discharge. The EHDS treats 'discharge reports' as a single priority category, covering any kind of encounter that ends with a discharge, for example a **hospital stay**, an **emergency department visit**, a **day-care** episode, a **rehabilitation** stay or an **ambulatory** specialist episode. 
 
-Its main goal is to define the content components and preferred structure for composing a Discharge Report, as a common framework that can be further specialised for specific kinds of discharge report and care settings.
+Its main goal is to fulfil the requirements of the EHDS logical model by defining the content components and preferred structure by using HL7 FHIR. It is a common framework, intentionally generic, and should be read as the shared baseline for this category rather than a complete specification for every kind of discharge report.
+
+The information needed to report a hospital stay, an emergency department visit or a rehabilitation stay differs in its level of detail, in its sections and in the clinical vocabulary it uses.
+ Real-world implementations are therefore expected to build on this guide through specialisations for the specific kinds of discharge report and care settings, defined at European, national or domain level, rather than to use it as-is for all of them.
 
 This includes both jurisdictional and cross-border scenarios.
 
@@ -45,7 +48,7 @@ The goal of this Implementation Guide is to define a common European specificati
 
 This project is promoted by HL7 Europe and developed in collaboration with several other European and national organisations and projects.
 
-The aspiration is for this guide to be used as a basis for European national guides, the European EEHRxF and, consequently, by MyHealth@EU for EU cross-border services.
+The aspiration is for this guide to be used as a basis for European and national guides, including those dedicated to specific kinds of discharge report, the European EEHRxF and, consequently, by MyHealth@EU for EU cross-border services.
 
 ### Background
 
