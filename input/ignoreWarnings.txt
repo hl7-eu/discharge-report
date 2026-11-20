@@ -13,7 +13,7 @@ Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-act
 # Obligation extension (information messages, one per obligation in the snapshots of the obligation profiles):
 # the IG Publisher adds the tooling sub-extension http://hl7.org/fhir/tools/StructureDefinition/snapshot-source
 # (source profile of the obligation) to every obligation extension copied into a snapshot. This sub-extension is not
-# a slice of http://hl7.org/fhir/StructureDefinition/obligation (hl7.fhir.uv.extensions.r4#5.3.0, open slicing).
+# a slice of http://hl7.org/fhir/StructureDefinition/obligation (hl7.fhir.uv.extensions.r4#5.4.0, open slicing).
 # The DR obligations only use the code and actor sub-extensions, which match the defined slices.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
 
@@ -149,3 +149,9 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://w
 # substitution.allowed[x]; the example binding inherited from MedicationRequestEuCore (v3-ActSubstanceAdminSubstitutionCode)
 # stays on the slicer and has no effect on the boolean form. Accepted: the obligation targets the coded form on purpose.
 %The Binding on the type slicer MedicationRequest.substitution.allowed[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean%
+
+# eHDSI value set inherited from the EU Base bindings (Condition.code and similar): tx.fhir.org cannot expand
+# eHDSIIllnessandDisorder|0.2.0 because its ICD-10 codes (e.g. I70.20) are not in http://hl7.org/fhir/sid/icd-10|2019-covid-expanded.
+# Terminology server problem, not a problem in this guide's content; to be reported to the tx.fhir.org / EU Base maintainers.
+# Remove this entry once the value set expands again.
+%The value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder|0.2.0' is not valid%
