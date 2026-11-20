@@ -2,7 +2,7 @@
 
 // Actor Canonical
 
-// Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-dr
+// Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-hdr
 Alias: $creator = https://www.xt-ehr.eu/specifications/fhir/actor-producer
 Alias: $consumer = https://www.xt-ehr.eu/specifications/fhir/actor-consumer
 
