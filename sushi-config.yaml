@@ -27,7 +27,7 @@ dependencies:
   xtehr.eu.ehds.models: 1.0.0
   hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.eu.base: 2.0.1
-  hl7.fhir.uv.extensions.r4: 5.3.0
+  hl7.fhir.uv.extensions.r4: 5.4.0
   hl7.fhir.uv.xver-r5.r4: 0.1.0
   hl7.fhir.eu.extensions.r4:
    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
@@ -88,6 +88,8 @@ pages:
     title: Copyright
   crossversionanalysis.md:
     title: Cross version analysis
+  menu.md:
+    title: Menu
   expansion-params.md:
     title: Expansion Parameters
     
@@ -229,101 +231,7 @@ menu:
     Known Issues: knownIssues.html
   Artifacts: artifacts.html
 
-# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
-# │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
-# │  resource. These properties are less commonly needed than those above.                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-#
-# Those who need more control or want to add additional details to the contact values can use
-# contact directly and follow the format outlined in the ImplementationGuide resource and
-# ContactDetail.
-#
-# contact:
-#   - name:  Bob Smith
-#     telecom:
-#       - system: email # phone | fax | email | pager | url | sms | other
-#         value: bobsmith@example.org
-#         use: work
-#
-#
-# The global property corresponds to the IG.global property, but it
-# uses the type as the YAML key and the profile as its value. Since
-# FHIR does not explicitly disallow more than one profile per type,
-# neither do we; the value can be a single profile URL or an array
-# of profile URLs. If a value is an id or name, SUSHI will replace
-# it with the correct canonical when generating the IG JSON.
-#
-# global:
-#   Patient: http://example.org/fhir/StructureDefinition/my-patient-profile
-#   Encounter: http://example.org/fhir/StructureDefinition/my-encounter-profile
-#
-#
-# The resources property corresponds to IG.definition.resource.
-# SUSHI can auto-generate all of the resource entries based on
-# the FSH definitions and/or information in any user-provided
-# JSON or XML resource files. If the generated entries are not
-# sufficient or complete, however, the author can add entries
-# here. If the reference matches a generated entry, it will
-# replace the generated entry. If it doesn't match any generated
-# entries, it will be added to the generated entries. The format
-# follows IG.definition.resource with the following differences:
-#   * use IG.definition.resource.reference.reference as the YAML key.
-#   * if the key is an id or name, SUSHI will replace it with the
-#     correct URL when generating the IG JSON.
-#   * specify "omit" to omit a FSH-generated resource from the
-#     resource list.
-#   * if the exampleCanonical is an id or name, SUSHI will replace
-#     it with the correct canonical when generating the IG JSON.
-#   * groupingId can be used, but top-level groups syntax may be a
-#     better option (see below).
-# The following are simple examples to demonstrate what this might
-# look like:
-
-# resources:
-
-#------------ Concept Maps  -------------
-#  ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
-#    name: DiagnosticReport to Composition status
-#    description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
-
-
-#------------ Logical Models -------------
-
-#  StructureDefinition/Subject:
-#    name: A.1.1, A.1.2 - Subject of care
-#    description: Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.
-
-#----------- Examples -------------
-#  Specimen/Specimen-animal-example:
-#    name: "Specimen: animal example"
-#    description: Example of Specimen collected from an animal.
-
-# -------------  Obligations
-# StructureDefinition/Patient-obl-eu-lab:
-#   name: Patient Obligations
-#   description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
-
-
-#  Patient/my-example-patient:
-#    name: My Example Patient
-#    description: An example Patient
-#    exampleBoolean: true
-#  Patient/bad-example: omit
-
-
-#
-# Groups can control certain aspects of the IG generation.  The IG
-# documentation recommends that authors use the default groups that
-# are provided by the templating framework, but if authors want to
-# use their own instead, they can use the mechanism below.  This will
-# create IG.definition.grouping entries and associate the individual
-# resource entries with the corresponding groupIds. If a resource
-# is specified by id or name, SUSHI will replace it with the correct
-# URL when generating the IG JSON.
-#
 groups:
-
-
     eHNDischargeReport:
       name:  Discharge Report
       description: Discharge Report document profiles.
@@ -331,40 +239,6 @@ groups:
         - StructureDefinition/bundle-obl-eu-dr
         - StructureDefinition/composition-obl-eu-dr
 
-
-#    eHNGuidelines:
-#      name:  eHN Hospital Discharge Report Guidelines (Informative)
-#      description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
-#      resources:
-#        - StructureDefinition/HospitalDischargeReport
-#        - StructureDefinition/Header
-#        - StructureDefinition/Subject
-#        - StructureDefinition/AdvanceDirectives
-#        - StructureDefinition/Alerts
-#        - StructureDefinition/InPatientEncounter
-#        - StructureDefinition/AdmissionEvaluation
-#        - StructureDefinition/PatientHistory
-#        - StructureDefinition/HospitalStay
-#        - StructureDefinition/DischargeDetails
-#        - StructureDefinition/ObjectiveFindings
-#        - StructureDefinition/FunctionalStatus
-#        - StructureDefinition/PlanOfCare
-#        - StructureDefinition/MedicationSummary
-##  
-#    logicalModelsMaps:
-#      name:  eHN Logical Model mappings (Informative)
-#      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
-#      resources:
-#        - ConceptMap/hdr2FHIR-eu-discharge-report
-#        - ConceptMap/hdrHeader2FHIR-eu-discharge-report
-#        - ConceptMap/subject2FHIR-eu-discharge-report
-#        - ConceptMap/encounter2FHIR-eu-discharge-report
-#        - ConceptMap/alerts2FHIR-eu-discharge-report
-#        - ConceptMap/advanceDirectives2FHIR-eu-discharge-report
-#        - ConceptMap/planOfCare2FHIR-eu-discharge-report
-#        - ConceptMap/medicationSummary2FHIR-eu-discharge-report
-
-#  
     obligations:
       name:  Obligations (Informative)
       description: Obligations used to describe the Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
@@ -392,55 +266,5 @@ groups:
         - StructureDefinition/observation-obl-eu-dr
         - StructureDefinition/procedure-obl-eu-dr
 
-
-#
-# The ImplementationGuide resource defines several other properties
-# not represented above. These properties can be used as-is and
-# should follow the format defined in ImplementationGuide:
-# * date
-# * meta
-# * implicitRules
-# * language
-# * text
-# * contained
-# * extension
-# * modifierExtension
-# * experimental
-# * useContext
-# * copyright
-# * packagingId
-#
-#
-# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
-# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# The FSHOnly flag indicates if only FSH resources should be exported.
-# If set to true, no IG related content will be generated.
-# The default value for this property is false.
-#
-# FSHOnly: false
-#
-#
-# When set to true, the "short" and "definition" field on the root element of an Extension will
-# be set to the "Title" and "Description" of that Extension. Default is true.
-#
-# applyExtensionMetadataToRoot: true
-#
-#
-# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
-# See the individual option definitions below for more detail.
-
 instanceOptions:
   manualSliceOrdering: true
-#
-# instanceOptions:
-#   Determines for which types of Instances SUSHI will automatically set meta.profile
-#   if InstanceOf references a profile:
-#
-#   setMetaProfile: always # always | never | inline-only | standalone-only
-#
-#
-#   Determines for which types of Instances SUSHI will automatically set id
-#   if InstanceOf references a profile:
-#
-#   setId: always # always | standalone-only

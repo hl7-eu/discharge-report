@@ -146,7 +146,7 @@ Usage: #inline
 * period.end = "2025-04-10T11:00:00Z"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * serviceProvider = Reference(urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38)
-* reasonCode = $sct#714628002 "Prediabetes (finding)"
+* reasonCode = $sct#714628002 "Prediabetes"
 * serviceType = $sct#171183004 "Diabetes mellitus screening (procedure)"
 
 Instance: composition-hdr-luca-example
