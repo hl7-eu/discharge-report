@@ -1,10 +1,10 @@
 # HL7 Europe Discharge Report – Consistency Review for 1.0.0-ci-build (first draft)
 
-- **Date:** 2026-11-20. Last updated after the fixes for §1, §2, 5-1 and the IG Publisher run of 2026-11-20 06:50. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-11-20. Last updated after the fixes for §1, §2 and 5-1 were committed (`f2ea89c` to `0100800`). Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the local template (`ig-template`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI ran as part of the Publisher build; its error and warning counts were not captured separately in this review.
-  - The IG Publisher 3.0.5 run of 2026-11-20 06:50 was built as `hl7.fhir.eu.discharge-report#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `c09b852` plus the working copy (fixes for 1-1 to 1-3, 2-1, 2-2, 2-5, 2-7 and 5-1, and the aliases copied from HDR). None of these changes is committed yet.
+  - The IG Publisher 3.0.5 run of 2026-11-20 06:50 was built as `hl7.fhir.eu.discharge-report#1.0.0-ci-build`, status `draft`, release label `ci-build`. It ran before commits `f2ea89c` to `ef5a541`, but on a working copy with the same content: since the build only the files in `reviews/` have changed. No rebuild is needed for this review.
   - It reports **20480 errors, 234 warnings and 8 information messages**, plus 195 suppressed warnings and 21090 suppressed hints. 20424 of the errors are still the terminology problem of 1-1; 33 errors and 231 warnings are new and come from the pinned template (1-4).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0-ci-build. **Low** means cleanup or editorial.
@@ -169,11 +169,10 @@ This section is based on the IG Publisher 3.0.5 run of 2026-11-20 06:50, built a
 1. Go back to the `current` template (1-4, 2-1), rebuild and check the rendered look.
 2. Report the eHDSI value set problem and delete the ineffective suppression (1-1, 7-18); re-check 5-2 afterwards.
 3. Fix the Novák Observations (5-3).
-4. Commit the working copy in coherent commits.
-5. `changes.md` (6.1-1) and the `knownIssues.md` additions (§6.6).
-6. Clean up `ignoreWarnings.txt` (7-9, 7-11 to 7-16) after a clean build.
-7. Before publication: release version and label (2-4), `hl7.terminology.r4` (2-6).
-8. Cleanup: §3.3, 3.2-1, 5-4 to 5-8, 6.2-1, 6.4-1, §6.5, 8-2.
+4. `changes.md` (6.1-1) and the `knownIssues.md` additions (§6.6).
+5. Clean up `ignoreWarnings.txt` (7-9, 7-11 to 7-16) after a clean build.
+6. Before publication: release version and label (2-4), `hl7.terminology.r4` (2-6).
+7. Cleanup: §3.3, 3.2-1, 5-4 to 5-8, 6.2-1, 6.4-1, §6.5, 8-2.
 
 ---
 
@@ -195,17 +194,26 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 - 8-1: the template switch, the `ignoreWarnings.txt` alignment with HDR 1.0.0, the deletion of the Marcheschi example and the removal of the R4 vs R5 section are committed.
 - 6.4-2: the "R4 vs R5 IG" section of `crossversionanalysis.md` is removed (`ee752c4`).
 
-**Working copy, not yet committed** (confirmed by the 06:50 run):
+**Commit `f2ea89c`** (confirmed by the 06:50 run):
 
-- 1-2 (and 7-2): `input/includes/menu.xml` replaces the SUSHI menu, with `href="menu.html"` on the dropdown toggles, and the new page `input/pagecontent/menu.md` is listed in `sushi-config.yaml`. The menu error is gone.
+- 1-2 (and 7-2): `input/includes/menu.xml` replaces the SUSHI menu, with `href="menu.html"` on the dropdown toggles, plus the new page `input/pagecontent/menu.md` (registered in `sushi-config.yaml` in `41ce152`). The menu error is gone.
 - 1-3 (and 6.3-1, 7-3): the links in `input/pagecontent/downloads.md` start with `../`. No broken download links are reported.
 - 2-2: `ig-template/README.md` describes this template; `ig-template/package-list.json` has the Discharge Report canonical and CI URL. The check of the rendered look moves to 1-4.
-- 2-3: `FHIR-eu-discharge-report.xml` restored to the committed version (`ciUrl` and `gitUrl` set, no `1.0.0-ci-build` entry); nothing to commit.
+
+**Commit `41ce152`:**
+
 - 2-5 (part of 7-7): `hl7.fhir.uv.extensions.r4` updated to 5.4.0 in `sushi-config.yaml`; the outdated-package warning is gone. HDR 1.0.0 still uses 5.3.0.
 - 2-7: SUSHI template comments and commented-out Laboratory / eHN entries removed from `sushi-config.yaml`.
+
+**Commit `0100800`:**
+
 - 5-1 (and 7-5): the code `714628002` is active in SNOMED CT; only its display was wrong. The display is now `Prediabetes` (`input/fsh/examples/instances/HDR-Luigi-De-Luca-example.fsh:149`). The Encounter, Composition and Bundle slice errors are gone.
+
+**No commit needed:**
+
+- 2-3: `FHIR-eu-discharge-report.xml` restored to the version committed in `c09b852` (`ciUrl` and `gitUrl` set, no `1.0.0-ci-build` entry).
 
 **Attempted, not effective:**
 
-- 1-1: the suppression in `input/ignoreWarnings.txt:153-157` does not hide the errors (see 1-1, 7-18).
-- 2-1: the pin to `fhir2.base.template#0.1.0` causes new errors (see 1-4).
+- 1-1: the suppression added in `41ce152` (`input/ignoreWarnings.txt:153-157`) does not hide the errors (see 1-1, 7-18).
+- 2-1: the pin to `fhir2.base.template#0.1.0` in `f2ea89c` causes new errors (see 1-4).

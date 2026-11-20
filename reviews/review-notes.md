@@ -6,3 +6,7 @@ Decisions taken during the consistency reviews. Findings listed here are not rai
 
 - **Composition sections without a Bundle entry slice** (`ClinicalImpression`, `QuestionnaireResponse`): inherited unchanged from HDR 1.0.0, kept as in HDR. (Report 1.0.0-ci-build, 3.1-1; 2026-11-19.)
 - **Composition sections without an entry constraint** (Admission evaluation, Discharge summary, Course of encounter, Synthesis, Patient history, Discharge details): inherited unchanged from HDR 1.0.0, kept as in HDR. (Report 1.0.0-ci-build, 3.1-2; 2026-11-19.)
+
+## Conventions
+
+- **Extensions package:** the guide uses `hl7.fhir.uv.extensions.r4` 5.4.0, even though HDR 1.0.0 uses 5.3.0. Do not raise the version difference with HDR as an issue. (Report 1.0.0-ci-build, 2-5; 2026-11-20.)
